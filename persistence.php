@@ -18,7 +18,7 @@ $sql = "INSERT INTO usuarios (nome, email, telefone) VALUES ('{$nome}','{$email}
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>
-        alert('There are no fields to generate a report');
+        alert('Dados enviados com sucesso!');
         window.location.href='index.html';
     </script>";
 } else {
