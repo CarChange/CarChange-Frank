@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
     /*
 	    Contact form
 	*/
-	$('.c-form-box form').submit(function(e) {
+	/*$('.c-form-box form').submit(function(e) {
 		e.preventDefault();
 		var this_form_parent = $(this).parents('.c-form-box');
 	    var postdata = $(this).serialize();
@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
 	            
 	        }
 	    });
-	});
+	});*/
 	
 	
 });
