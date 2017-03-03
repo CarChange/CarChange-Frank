@@ -22,14 +22,14 @@ h1, h2 {
 	margin-top: 10px;
 	font-size: 38px;
     font-weight: 100;
-    color: #555;
+    /*color: #555;*/
     line-height: 50px;
 }
 
 h3 {
 	font-size: 22px;
     font-weight: 300;
-    color: #555;
+    /*color: #555;*/
     line-height: 30px;
 }
 
