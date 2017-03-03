@@ -17,7 +17,10 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO usuarios (nome, email, telefone) VALUES ('{$nome}','{$email}','{$telefone}')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "<script>
+        alert('There are no fields to generate a report');
+        window.location.href='index.html';
+    </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
