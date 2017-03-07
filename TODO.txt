@@ -1,0 +1,5 @@
+Back-end:
+	* Terminar de formular os 'form#.php' (até o 8, integrar com o front-end (método _POST), adicionar linha SQL e criar nova tabela na base de dados para formulário).
+
+Front-end:
+	*
