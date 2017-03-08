@@ -4289,6 +4289,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -15px;
+      /*PODE CORRIGIR BRAND TELA GRANDE AQUI*/
   }
 }
 .navbar-toggle {
@@ -4350,6 +4351,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
+
 }
 @media (min-width: 768px) {
   .navbar-nav {
