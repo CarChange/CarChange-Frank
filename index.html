@@ -23,7 +23,8 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">    
+    <!--<link href="css/creative.min.css" rel="stylesheet">-->
+    <link href="css/creative.css" rel="stylesheet"> 
 
     <!-- CSS do Formulário -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
@@ -79,10 +80,12 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h3>O consórcio de veículos mais barato e acessível do Brasil,<br>aliado a um clube exclusivo de benefícios</h3>
+                <h3 class="hidden-xs">O consórcio de veículos mais barato e acessível do Brasil,<br>aliado a um clube exclusivo de benefícios</h3>
+                <h3 class="visible-xs">O consórcio de veículos<br>mais acessível do Brasil,<br>aliado a um clube de benefícios</h3>
                 <!--<h1 id="homeHeading">e ele pode mudar sua vida</h1><hr>-->
                 <hr>
-                <h1>E ELE PODE MUDAR SUA VIDA</h1>
+                <h1 class="hidden-xs">E ELE PODE MUDAR SUA VIDA</h1>
+                <h2 class="visible-xs">E PODE MUDAR<br>SUA VIDA</h2>
                 <p></p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Saiba mais</a>
             </div>
@@ -321,6 +324,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    <!--<script src="js/creative.js"></script>-->
     
     <!--[if lt IE 10]>
         <script src="assets/js/placeholder.js"></script>
