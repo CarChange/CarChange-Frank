@@ -32,7 +32,9 @@
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="assets/css/animate.css">-->
     <link rel="stylesheet" href="assets/css/style.css">    
-    
+    <?php
+        session_start();
+    ?>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -276,7 +278,7 @@
                             <label for="formAname">
                                 Nome
                             </label>
-                            <input type="text" name="nome" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="nome" value="$_SESSION['nome']" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         <div class="form-group">
                             <label for="formAmail">
