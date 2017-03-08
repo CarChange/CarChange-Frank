@@ -5,20 +5,25 @@ $username = "u427946632_luke";
 $password = "fallout";
 $dbname = "u427946632_teste";
 //Form Data
-//Adicionar dados ao form, completar com o nome no HTML
-//Parte 1 - Identificação
-$data_nasc     = $_POST[""];
-$naturalidade  = $_POST[""];
-$uf_nasc       = $_POST[""];
-$est_civil     = $_POST[""];
-$sexo          = $_POST[""];
-$dependentes   = $_POST[""];
-$cpf           = $_POST[""];
-$rg            = $_POST[""];
-$emissor_rg    = $_POST[""];
-$profissao     = $_POST[""];
-$nome_pai      = $_POST[""];
-$nome_mae      = $_POST[""];
+//Fazer a linha de INSERT do SQL, completar com o nome da variável no HTML
+//Parte 8 - Referências
+//Pessoais:
+$nome      = $_POST[""];    //Fazer em JS uma lógica para adicionar pessoas
+$end       = $_POST[""];    //à lista de referências. Vamos pensar por enquanto
+$telefone  = $_POST[""];    //que essas variáveis retornam vetores.
+
+//Comerciais:
+$endereco  = $_POST[""];
+$telefone  = $_POST[""];
+
+//Bancárias:
+$banco       = $_POST[""];
+$agencia     = $_POST[""];
+$conta       = $_POST[""];
+$cheque_esp  = $_POST[""];
+$limite      = $_POST[""];
+
+//Falta informações adicionais, como consta na documentação.
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

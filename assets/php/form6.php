@@ -5,14 +5,14 @@ $username = "u427946632_luke";
 $password = "fallout";
 $dbname = "u427946632_teste";
 //Form Data
-//Parte 2 - Endereço
-$rua_res       = $_POST[""];
-$bairro_res    = $_POST[""];
-$cidade_res    = $_POST[""];
-$uf_end        = $_POST[""];
-$cep_res       = $_POST[""];
-$tempo_res     = $_POST[""];
-$telefone_res  = $_POST[""];
+//Fazer a linha de INSERT do SQL, completar com o nome da variável no HTML
+//Parte 6 - Fontes de Renda
+$rendimento            = $_POST[""];
+$rendimento_conj       = $_POST[""];
+$rendimento_outros     = $_POST[""];
+$outros_specs          = $_POST[""];    //multivalorado
+//campo rendimento total pode ser feito via BD
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
