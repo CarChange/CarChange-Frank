@@ -38,7 +38,7 @@ h3 {
 	font-size: 22px;
     font-weight: 300;
     /*color: #555;*/
-    line-height: 30px;
+    line-height: 25px;
 }
 
 h4 {
@@ -230,3 +230,39 @@ img { max-width: 100%; }
 	
 }
 
+/*CONFIGURAÇOES CARCHANGE*/
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  width: 80%;
+  margin: auto;
+  color: inherit;
+  background-color: whitesmoke;
+  margin-top: 130px;
+  border-style: solid;
+  border-color: #F05F40;
+  border-width: thin;
+}
+
+.jumbotron-xs {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  width: 80%;
+  margin: auto;
+  color: inherit;
+  background-color: whitesmoke;
+  margin-top: 130px;
+  border-style: solid;
+  border-color: #F05F40;
+  border-width: thin;
+}
+
+.a-white {
+  color: antiquewhite;
+}
+.a-white:hover,
+.a-white:focus {
+  color: #286090;
+} 

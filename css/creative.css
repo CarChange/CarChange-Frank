@@ -18,6 +18,7 @@ hr {
 }
 hr.light {
   border-color: white;
+  padding-bottom: 12px;
 }
 a {
   -webkit-transition: all 0.35s;
@@ -89,7 +90,7 @@ aside {
 }
 /*CORREÇÃO BOOTSTRAP*/
 @media (max-width: 767px) {
-      .navbar-brand {
+  .navbar-brand {
     padding-top: 23px;
   }
 }
@@ -171,6 +172,7 @@ header .header-content {
   position: relative;
   text-align: center;
   padding: 100px 15px 100px;
+  /*padding: 0px 0px 100px 0px;*/
   width: 100%;
 }
 header .header-content .header-content-inner h1 {
