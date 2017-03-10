@@ -21,8 +21,7 @@ $sql = "INSERT INTO `prospeccao`(`nome`, `telefone`, `email`) VALUES ('{$nome}',
 if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Cadastro realizado com sucesso!');
-        window.location.href='index.html';
+        alert('Por favor, complete seu cadastro.');
     </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
