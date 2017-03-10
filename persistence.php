@@ -10,21 +10,22 @@ $dbname = "u427946632_carc";
 $nome          = $_POST["nome"];
 $email         = $_POST["email"];
 $telefone      = $_POST["telefone"];
-$data_nasc     = $_POST[""];
-$naturalidade  = $_POST[""];
-$uf_nasc       = $_POST[""];
-$est_civil     = $_POST[""];
-$sexo          = $_POST[""];
-$dependentes   = $_POST[""];
-$cpf           = $_POST[""];
-$rg            = $_POST[""];
-$emissor_rg    = $_POST[""];
-$profissao     = $_POST[""];
-$nome_pai      = $_POST[""];
-$nome_mae      = $_POST[""];
-$rendimento    = $_POST[""];
-$rend_outros   = $_POST[""];
-$num_dep       = $_POST[""];
+$data_nasc     = $_POST["data_nasc"];
+$nacion        = $_POST["nacion"];
+$natur         = $_POST["natur"];
+$uf            = $_POST["uf"];
+$est_civil     = $_POST["est_civil"];
+$sexo          = $_POST["sexo"];
+$dependentes   = $_POST["dependentes"];
+$cpf           = $_POST["cpf"];
+$rg            = $_POST["rg"];
+$emissor_rg    = $_POST["emissor_rg"];
+$profissao     = $_POST["profissao"];
+$nome_pai      = $_POST["nome_pai"];
+$nome_mae      = $_POST["nome_mae"];
+$rendimento    = $_POST["rendimento"];
+$rend_outros   = $_POST["rend_outros"];
+$num_dep       = $_POST["num_dep"];
 
 //Tabela Endereco
 $rua          = $_POST[""];
@@ -100,7 +101,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `naturalidade`, `uf_nasc`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) VALUES ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$naturalidade}','{$uf_nasc}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}')";
+$sql = "INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) VALUES ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
