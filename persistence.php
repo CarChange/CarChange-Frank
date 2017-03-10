@@ -10,6 +10,7 @@ $dbname = "u427946632_carc";
 $nome          = $_POST["nome"];
 $email         = $_POST["email"];
 $telefone      = $_POST["telefone"];
+$celular       = $_POST["celular"];
 $data_nasc     = $_POST["data_nasc"];
 $nacion        = $_POST["nacion"];
 $natur         = $_POST["natur"];
@@ -25,7 +26,7 @@ $nome_pai      = $_POST["nome_pai"];
 $nome_mae      = $_POST["nome_mae"];
 $rendimento    = $_POST["rendimento"];
 $rend_outros   = $_POST["rend_outros"];
-
+/*
 //Tabela Endereco
 $rua          = $_POST[""];
 $bairro       = $_POST[""];
@@ -92,7 +93,7 @@ $agencia_rb     = $_POST[""];
 $conta_rb       = $_POST[""];
 $cheque_esp_rb  = $_POST[""];
 $limite_rb      = $_POST[""];
-
+*/
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -100,7 +101,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) VALUES ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}')";
+$sql = "INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) VALUES ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
