@@ -22,6 +22,7 @@ if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
         alert('Por favor, complete seu cadastro.');
+        window.location.href='cadastro.html';
     </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
