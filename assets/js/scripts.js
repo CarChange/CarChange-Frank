@@ -60,3 +60,22 @@ jQuery(document).ready(function() {
 	
 	
 });
+
+//MODAL INFO CONSORCIO
+$(document).ready(function(){
+    $("#modalConsorcio1").click(function(){
+        $("#modalCons1").modal();
+    });
+});
+
+$(document).ready(function(){
+    $("#modalConsorcio2").click(function(){
+        $("#modalCons2").modal();
+    });
+});
+
+$(document).ready(function(){
+    $("#modalConsorcio3").click(function(){
+        $("#modalCons3").modal();
+    });
+});
