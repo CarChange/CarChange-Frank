@@ -111,7 +111,7 @@ img { max-width: 100%; }
 .c-form-HUE textarea,
 .c-form-HUE textarea.form-control {
 	height: 50px;
-    margin: 0;
+    margin-bottom: 15px;
     padding: 0 20px;
     vertical-align: middle;
     background: #fff;
