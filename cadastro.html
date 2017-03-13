@@ -23,7 +23,7 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">    
+    <link href="css/creative.css" rel="stylesheet">    
 
     <!-- CSS do Formulário -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
@@ -51,14 +51,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">CarChange</a>
+                <a class="visible-xs navbar-brand page-scroll" href="#page-top">Cadastro CarChange</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <a class="page-scroll" href="#about">Identificação</a>
+                        <a class="page-scroll" href="#ident">Identificação</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services">Endereço Residencial</a>
@@ -70,16 +70,13 @@
                         <a class="page-scroll" href="#portfolio">Referências</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Endereço Comercial</a>
-                    </li>
-                    <li>
                         <a class="page-scroll" href="#portfolio">Bens</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Faça parte</a>
+                        <a class="page-scroll" href="#conjuge">Cônjuge</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#conjuge">Cônjuge</a>
+                        <a class="page-scroll" href="#fim">Finalizar</a>
                     </li>
                 </ul> 
             </div>
@@ -263,13 +260,13 @@
         </div>
     </aside>-->
 
-    <section class= "bg-primary no-padding c-form-container section-container-image-bg" id="contact">
+    <section class= "bg-primary no-padding c-form-container section-container-image-bg" id="ident">
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text-center c-form section-description wow fadeIn">
                     <p>&nbsp;</p>
                     <h1 class="hidden-xs">Dados do <strong>Cliente</strong></h1>
-                    <h2 class="visible-xs section-heading">Dados do <strong>Cliente</strong></h2>
+                    <h2 class="visible-xs section-heading"><strong>Dados do </strong>Cliente</h2>
                     <!--<h2 class="section-heading">Let's Get In Touch!</h2>-->
                     <hr class="primary">
                     <h3 class="hidden-xs">Insira os dados no campo abaixo.</h3>
@@ -281,92 +278,214 @@
                 <!-- FORMULÁRIO -->
                 <div class="container-fluid c-form-HUE">
                     <form role="form" action="persistence.php" method="post">
-                        <div class="col-md-6 form-group">
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 form-group">
                             <label for="formAname">
                                 Nome
                             </label>
-                            <input type="text" name="nome" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="nome" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 form-group">
                             <label for="formAmail">
                                 Email
                             </label>
+                        </div>
+                        <div class="col-md-6">
                             <input type="text" name="email" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
-                            <label for="formAtel">
-                                Telefone Celular
-                            </label>
-                            <input type="text" name="celular" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <hr>
+                        &nbsp;
+                        <div class="row">
+                        <div class="col-md-3 form-group">
                             <label for="formAname">
                                 Data de Nascimento
                             </label>
-                            <input type="text" name="data_nasc" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
-                            <label for="formAmail">
-                                Naturalidade
-                            </label>
-                            <input type="text" name="natur" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="data_nasc" placeholder="Sua data de nascimento..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-2 form-group">
                             <label for="formAtel">
                                 Nacionalidade
                             </label>
-                            <input type="text" name="nacion" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
-                            <label for="formAname">
-                                Rendimento
-                            </label>
-                            <input type="text" name="rendimento" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
-                            <label for="formAmail">
-                                Rendimento Outros
-                            </label>
-                            <input type="text" name="rend_outros" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
-                            <label for="formAtel">
-                                Profissão
-                            </label>
-                            <input type="text" name="profissao" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
                         </div>
-                        <div class="col-md-6">
-                           <label for="formAname">
+                        <div class="col-md-3">
+                                <input type="text" name="nacion" placeholder="Sua nacionalidade..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAmail">
+                                Naturalidade
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                                <input type="text" name="natur" placeholder="Sua naturalidade..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        <div class="col-md-1 form-group">
+                            <label>
+                                UF
+                            </label>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text" name="uf" placeholder="UF" class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-2 form-group">
+                            <label for="formAtel">
+                                Telefone Celular
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="celular" placeholder="Seu número de telefone celular..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAname">
+                                Telefone Fixo
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="telefone" placeholder="Seu número de telefone fixo..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        </div>
+                        <hr>
+                        &nbsp;
+                        <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label for="formAname">
                                 CPF
                             </label>
-                            <input type="text" name="cpf" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="cpf" placeholder="Seu CPF..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-2 form-group">
                             <label for="formAmail">
                                 RG
                             </label>
-                            <input type="text" name="rg" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
-                            <label for="formAtel">
-                                Telefone Fixo
-                            </label>
-                            <input type="text" name="telefone" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required> 
-                            <label for="formAname">
-                                Estado Civil
-                            </label>
-                            <input type="text" name="est_civil" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
-                            <label for="formAmail">
-                                Sexo
-                            </label>
-                            <input type="text" name="sexo" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
-                            <label for="formAtel">
-                                Número de Dependentes
-                            </label>
-                            <input type="text" name="num_dep" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        <div class="col-md-2 form-group">
                             <label for="formAname">
                                 Emissor RG
                             </label>
-                            <input type="text" name="emissor_rg" placeholder="Seu nome..." class="c-form-name form-control" id="c-form-name" required>
-                            <label for="formAmail">
-                                Nome Pai
-                            </label>
-                            <input type="text" name="nome_pai" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
-                            <label for="formAtel">
-                                Nome Mãe
-                            </label>
-                            <input type="text" name="nome_mae" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
-                            <label for="formAtel">
-                                UF
-                            </label>
-                            <input type="text" name="uf" placeholder="Seu número de telefone..." class="c-form-subject form-control" id="c-form-subject" required>
                         </div>
+                        <div class="col-md-4">
+                                <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-2 form-group">
+                            <label for="formAmail">
+                                Sexo
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="sexo" placeholder="Seu sexo..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAname">
+                                Estado Civil
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="est_civil" placeholder="Seu estado civil..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-5 form-group">
+                            <label for="formAtel">
+                                Número de Dependentes
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                                <input type="text" name="num_dep" placeholder="Quantos dependentes..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAmail">
+                                Nome da Mãe
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="nome_mae" placeholder="Nome de sua mãe..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAmail">
+                                Nome do Pai
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="nome_pai" placeholder="Nome de seu pai..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <hr>
+                        &nbsp;
+                        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2 form-group">
+                            <label for="formAtel">
+                                Profissão
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="profissao" placeholder="Sua profissão..." class="c-form-subject form-control" id="c-form-subject" required>
+                        </div>
+                        <div class="col-md-3"></div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label for="formAname">
+                                Rendimento Mensal
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="rendimento" placeholder="Seu rendimento mensal..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-3 form-group">
+                            <label for="formAmail">
+                                Rendimento Familiar
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                                <input type="text" name="rend_outros" placeholder="Rendimento mensal de outros..." class="c-form-email form-control" id="c-form-email" required>
+                        </div>
+                        </div>
+                        <!--FIM DOS CAMPOS-->
+                        
                         <div class="container"></div>
-                        <button class="btn" type="submit">Enviar cadastro</button>
+                        <button class="btn" type="submit">Próxima Seção</button>
                     </form>
-                    <p>&nbsp;</p>
+                    &nbsp;
                 </div>
                 <!--FIM DO FORMULÁRIO-->
+            &nbsp;
             <div class="row">
                 <!--<div class="col-lg-4 col-lg-offset-2 text-center">
                     <i class="fa fa-phone fa-3x sr-contact"></i>
