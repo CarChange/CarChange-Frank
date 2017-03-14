@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CarChange - Transforme sua vida!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <!--<link href="css/creative.min.css" rel="stylesheet">-->
+    <link href="css/creative.css" rel="stylesheet"> 
+    <!-- CSS do Formulário -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
+    <!--<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="assets/css/animate.css">-->
+    <link rel="stylesheet" href="assets/css/style.css">   
+    
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Handlebars -->
+    <script src="vendor/handlebars/handlebars-v3.0.3.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.backstretch.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+    <!--<script src="js/creative.js"></script>-->
+    <!-- Compras JavaScript -->
+    <script src="js/compras.js"></script>
+    
+    <!--[if lt IE 10]>
+        <script src="assets/js/placeholder.js"></script>
+    <![endif]-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">CarChange Payment</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Olar</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropidaum do Christofer
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Opisao 1</a></li>
+          <li><a href="#">Opisao 2</a></li>
+          <li><a href="#">Opisao 666</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Oies</a></li>
+      <li><a href="#">Uiuiui</a></li>
+    </ul>
+  </div>
+</nav>-->
+    
+
+  <!-- A navigation menu that selects different views -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#">CarChange Payment</a>
+    </div>
+ <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ <ul class="nav nav-tabs navbar-nav">
+    <li role="" class="active"><a href="#" id="pagseguro-tab" >Pagseguro</a></li>
+    <li role=""><a href="#" id="tabelas-tab" >Tabelas</a></li>
+    <li role=""><a href="#" id="planos-tab" >Planos</a></li>
+    <li role="" class="hidden"><a href="#" id="login-tab" >Login</a></li>
+ </ul>
+  </div>
+    </div>
+</nav>
+
+
+  <!-- the content section is empty as we will fill it 
+        via javascript and templates -->
+  <div id="content"  class="container-fluid"  role="main">
+  </div>
+
+
+<!-- Here are our Templates -->
+
+
+<!-- this is the template for the albums view -->
+<!-- 
+    it displays the albums in a bootstrap grid format
+    with one item for each album (using the {{#each}} template expression. 
+    Each album is displayed with a thumbnail image, a name and 
+    the number of photos (using the {{photos.length}} template expression, see my lecture for more details)
+-->
+<script id="pagseguro-template" type="text/x-handlebars-template">
+<div class="row">
+    <div class="container">
+            <div class="jumbotron">
+                    <h2><strong>Consórcio CarChange</strong></h2>
+                    <p>O consórcio mais barato e vantajoso do Brasil.</p>
+                    <h3>Adquira aqui</h3>
+                    <br>
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                        <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+                        <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
+                        <input type="hidden" name="iot" value="button" />
+                        <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-laranja.gif" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
+                        </form>
+                    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+        <br><br>
+    </div>
+</div>
+  <div class="row">
+          <div class="col-md-6">
+            <h1>LifeChange</h1>
+            <p>R$ 99,00 / mês</p>
+            <h3><strong>Administre sua Franquia.</strong></h3>
+            <br>
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+            <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+            <input type="hidden" name="code" value="7FBF41F33A3A74D554D3CFA530F50451" />
+            <input type="hidden" name="iot" value="button" />
+            <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-azul.gif" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="120" height="53" />
+            </form>
+            <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+          <br><hr><br>
+          </div>
+      
+          <div class="col-md-6">
+              <h1>SmartChange</h1>
+              <p>R$ 39,00 / mês</p>
+              <h3>Um clube de vantagens.</h3>
+              <br>
+              <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+                <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-laranja.gif" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
+                </form>
+              <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+          <br><hr><br>
+          </div> <!-- / col -->
+  </div> <!-- / row -->
+</script>
+
+<!-- this is the template for the photos view of a single album -->
+<!-- 
+    like albums view it uses a bootstrap grid format to display the photos in an album
+    
+    Each photos is displayed with anumbnail image, a name and 
+    a description
+-->
+<script id="tabelas-template" type="text/x-handlebars-template">
+  <div class="row">
+    <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
+    <!-- md-3 : medium and up displays use 3 grid columns per column -->
+    <div class="col-xs-12 col-md-3"> 
+         <div class="caption">
+            <h3>Opa</h3>
+         </div>
+    </div>
+       
+    </div> <!-- / col -->
+
+  </div> <!-- / row -->
+</script>
+
+<!-- this is the template for the view a single photo -->
+<!-- 
+    It is displayed as a large image with title and description
+-->
+<script id="planos-template" type="text/x-handlebars-template">
+  <div class="row">
+    <div class="col-xs-12 col-md-12"> 
+          
+        <div class="caption">
+            <h3>Uuups</h3>
+        </div>
+      </div> <!-- / col -->
+
+  </div> <!-- / row -->
+</script>
+    
+<script id="login-template" type="text/x-handlebars-template">
+  <div class="row">
+    <div class="col-xs-12 col-md-12"> 
+          
+        <div class="caption">
+            <h3>Loguinho</h3>
+        </div>
+      </div> <!-- / col -->
+
+  </div> <!-- / row -->
+</script>
+
+</body>
+
+</html>

@@ -234,21 +234,21 @@ img { max-width: 100%; }
 
 /*CONFIGURAÇOES CARCHANGE*/
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  width: 80%;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 70%;
   margin: auto;
   color: inherit;
   background-color: whitesmoke;
-  margin-top: 130px;
+  margin-top: 13px;
   border-style: solid;
   border-color: #F05F40;
   border-width: thin;
 }
 
 .jumbotron-xs {
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 30px;
   margin-bottom: 30px;
   width: 80%;
