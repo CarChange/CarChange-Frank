@@ -88,7 +88,7 @@
     
 
   <!-- A navigation menu that selects different views -->
-<nav class="navbar navbar-inverse">
+<nav class="navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -110,8 +110,8 @@
 
   <!-- the content section is empty as we will fill it 
         via javascript and templates -->
-  <div id="content"  class="container-fluid"  role="main">
-  </div>
+  <section id="content"  class="bigdiv"  role="main">
+  </section>
 
 
 <!-- Here are our Templates -->
@@ -125,18 +125,34 @@
     the number of photos (using the {{photos.length}} template expression, see my lecture for more details)
 -->
 <script id="pagseguro-template" type="text/x-handlebars-template">
+<div class="container-fluid">
 <div class="row">
     <div class="container">
-            <div class="jumbotron">
-                    <h2><strong>Consórcio CarChange</strong></h2>
-                    <p>O consórcio mais barato e vantajoso do Brasil.</p>
-                    <h3>Adquira aqui</h3>
+            <div class="jumbotron hidden-xs">
+                    <h1>Consórcio CarChange</h1>
+                    <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
                     <br>
+                    <p>Clique no botão abaixo para adquirir.</p>
+                    
                     <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
                         <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
                         <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
                         <input type="hidden" name="iot" value="button" />
-                        <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-laranja.gif" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
+                        <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="215" height="93" />
+                        </form>
+                    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+            </div>
+            <div class="jumbotron-xs visible-xs">
+                    <h1>Consórcio CarChange</h1>
+                    <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
+                    <br>
+                    <p>Clique no botão abaixo para adquirir.</p>
+                    
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                        <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+                        <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
+                        <input type="hidden" name="iot" value="button" />
+                        <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="215" height="93" />
                         </form>
                     <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
             </div>
@@ -144,7 +160,8 @@
     </div>
 </div>
   <div class="row">
-          <div class="col-md-6">
+      <div class="container">
+          <div class="col-md-4 jumbozineo1">
             <h1>LifeChange</h1>
             <p>R$ 99,00 / mês</p>
             <h3><strong>Administre sua Franquia.</strong></h3>
@@ -153,13 +170,13 @@
             <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
             <input type="hidden" name="code" value="7FBF41F33A3A74D554D3CFA530F50451" />
             <input type="hidden" name="iot" value="button" />
-            <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-azul.gif" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="120" height="53" />
+            <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
             </form>
             <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-          <br><hr><br>
+          <br><hr class="visible-xs"><br>
           </div>
-      
-          <div class="col-md-6">
+
+          <div class="col-md-4 jumbozineo1">
               <h1>SmartChange</h1>
               <p>R$ 39,00 / mês</p>
               <h3>Um clube de vantagens.</h3>
@@ -168,12 +185,30 @@
                 <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
                 <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
                 <input type="hidden" name="iot" value="button" />
-                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/assinaturas/120x53-contratar-laranja.gif" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
+                <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
                 </form>
               <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
-          <br><hr><br>
+          <br><hr class="visible-xs"><br>
           </div> <!-- / col -->
+      
+          <div class="col-md-4 jumbozineo1">
+              <h1>Pacote Franquia</h1>
+              <p>R$ <del>899,00</del> <b>399,00</b> <i>por tempo limitado</i></p>
+              
+              <h3>Capacite-se para lucrar.</h3>
+              <br>
+              <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
+                <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
+                </form>
+              <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+          <br><hr class="visible-xs"><br>
+          </div> <!-- / col -->
+    </div> <!-- /container-fluid jumbozineos-->
   </div> <!-- / row -->
+</div> <!-- /container-fluid -->
 </script>
 
 <!-- this is the template for the photos view of a single album -->
