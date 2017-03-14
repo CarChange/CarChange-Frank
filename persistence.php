@@ -9,54 +9,70 @@ $dbname = "u427946632_carc";
 //Tabela Cliente
 $nome          = $_POST["nome"];
 $email         = $_POST["email"];
-$telefone      = $_POST["telefone"];
-$celular       = $_POST["celular"];
 $data_nasc     = $_POST["data_nasc"];
 $nacion        = $_POST["nacion"];
 $natur         = $_POST["natur"];
 $uf            = $_POST["uf"];
-$est_civil     = $_POST["est_civil"];
-$sexo          = $_POST["sexo"];
-$num_dep       = $_POST["num_dep"];
+$celular       = $_POST["celular"];
+$telefone      = $_POST["telefone"];
 $cpf           = $_POST["cpf"];
 $rg            = $_POST["rg"];
 $emissor_rg    = $_POST["emissor_rg"];
-$profissao     = $_POST["profissao"];
-$nome_pai      = $_POST["nome_pai"];
+$sexo          = $_POST["sexo"];
+$est_civil     = $_POST["est_civil"];
+$num_dep       = $_POST["num_dep"];
 $nome_mae      = $_POST["nome_mae"];
+$nome_pai      = $_POST["nome_pai"];
+$profissao     = $_POST["profissao"];
 $rendimento    = $_POST["rendimento"];
 $rend_outros   = $_POST["rend_outros"];
-/*
+
 //Tabela Endereco
-$rua          = $_POST[""];
-$bairro       = $_POST[""];
-$cidade       = $_POST[""];
-$uf           = $_POST[""];
-$cep          = $_POST[""];
-$tempo_res    = $_POST[""];
-$telefone     = $_POST[""];
-$casa_propria = $_POST[""];
-$mora_sozinho = $_POST[""];
+$rua          = $_POST["rua"];
+$bairro       = $_POST["bairro"];
+$cidade       = $_POST["cidade"];
+$uf_res       = $_POST["uf_res"];
+$cep          = $_POST["cep"];
+$casa_propria = $_POST["casa_propria"];
+$mora_sozinho = $_POST["mora_sozinho"];
+$tempo_res    = $_POST["tempo_res"];
+$telefone     = $_POST["telefone"];
 
-//Tabela Endereco Comercial
-$empresa_c   = $_POST[""];
-$rua_c       = $_POST[""];
-$bairro_c    = $_POST[""];
-$cidade_c    = $_POST[""];
-$uf_c        = $_POST[""];
-$cep_c       = $_POST[""];
-$funcao_c    = $_POST[""];
-$tempo_c     = $_POST[""];
-$telefone_c  = $_POST[""];
-$email_c     = $_POST[""];
-$celular_c   = $_POST[""];
+//Tabela Informacao Comercial
+$empresa     = $_POST["empresa"];
+$funcao      = $_POST["funcao"];
+$rua_c       = $_POST["rua_c"];
+$bairro_c    = $_POST["bairro_c"];
+$cidade_c    = $_POST["cidade_c"];
+$uf_c        = $_POST["uf_c"];
+$cep_c       = $_POST["cep_c"];
+$tempo_c     = $_POST["tempo_c"];
+$telefone_c  = $_POST["telefone_c"];
+$celular_c   = $_POST["celular_c"];
+$email_c     = $_POST["email_c"];
 
+//Tabela Ref Pessoal
+$nome_rp1      = $_POST["nome_rp1"];
+$end_rp1       = $_POST["end_rp1"];
+$celular_rp 1  = $_POST["celular_rp1"];
+$nome_rp2      = $_POST["nome_rp2"];
+$end_rp2       = $_POST["end_rp2"];
+$celular_rp2   = $_POST["celular_rp2"];
+
+//Tabela Ref Bancária
+$banco       = $_POST["banco"];
+$agencia     = $_POST["agencia"];
+$conta       = $_POST["conta"];
+$cheque_esp  = $_POST["cheque_esp"];
+$limite      = $_POST["limite"];
+
+/*
 //Tabela Conjuge*
 $nome_co           = $_POST[""];
 $data_nasc_co      = $_POST[""];
-$naturalidade_co   = $_POST[""];
+$natur_co          = $_POST[""];
 $uf_co             = $_POST[""];
-$nacionalidade_co  = $_POST[""];
+$nacio_co          = $_POST[""];
 $rg_co             = $_POST[""];
 $emissor_rg        = $_POST[""];
 $cpf_co            = $_POST[""];
@@ -77,23 +93,8 @@ $valor_divida       = $_POST[""];
 $marca   = $_POST[""];
 $modelo  = $_POST[""];
 $ano     = $_POST[""];
-
-//Tabela Ref Pessoal
-$nome_rp      = $_POST[""];    //Fazer em JS uma lógica para adicionar pessoas
-$end_rp       = $_POST[""];    //à lista de referências. Vamos pensar por enquanto
-$telefone  = $_POST[""];    //que essas variáveis retornam vetores.
-
-//Tabela Ref Comercial
-$endereco_rc  = $_POST[""];
-$telefone_rc  = $_POST[""];
-
-//Tabela Ref Bancária
-$banco_rb       = $_POST[""];
-$agencia_rb     = $_POST[""];
-$conta_rb       = $_POST[""];
-$cheque_esp_rb  = $_POST[""];
-$limite_rb      = $_POST[""];
 */
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
