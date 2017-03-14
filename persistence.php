@@ -104,7 +104,7 @@ if ($conn->connect_error) {
 if(strcmp($est_civil,"casado") == 0){
     
 
-$sql = "BEGIN;
+$sql = "
 
 INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
 
@@ -160,11 +160,11 @@ VALUES
 
 ('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');
 
-COMMIT;";
+";
     
 }else{
     
-$sql = "BEGIN;
+$sql = "
 
 INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
 
@@ -213,8 +213,7 @@ INSERT INTO `ref_bancaria`(`banco_rb`, `agencia_rb`, `conta_rb`, `cheque_esp_rb`
 VALUES
 
 ('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');
-
-COMMIT;";
+";
     
 }
     
