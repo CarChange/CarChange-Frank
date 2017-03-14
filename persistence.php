@@ -39,8 +39,8 @@ $tempo_res    = $_POST["tempo_res"];
 $telefone     = $_POST["telefone"];
 
 //Tabela Informacao Comercial
-$empresa     = $_POST["empresa"];
-$funcao      = $_POST["funcao"];
+$empresa_c     = $_POST["empresa"];
+$funcao_c      = $_POST["funcao"];
 $rua_c       = $_POST["rua_c"];
 $bairro_c    = $_POST["bairro_c"];
 $cidade_c    = $_POST["cidade_c"];
@@ -52,19 +52,19 @@ $celular_c   = $_POST["celular_c"];
 $email_c     = $_POST["email_c"];
 
 //Tabela Ref Pessoal
-$nome_rp1      = $_POST["nome_rp1"];
-$end_rp1       = $_POST["end_rp1"];
-$celular_rp    = $_POST["celular_rp1"];
+$nome_rp      = $_POST["nome_rp1"];
+$endereco_rp       = $_POST["end_rp1"];
+$telefone_rp    = $_POST["celular_rp1"];
 $nome_rp2      = $_POST["nome_rp2"];
-$end_rp2       = $_POST["end_rp2"];
-$celular_rp2   = $_POST["celular_rp2"];
+$endereco_rp2       = $_POST["end_rp2"];
+$telefone_rp2   = $_POST["celular_rp2"];
 
 //Tabela Ref Bancária
-$banco       = $_POST["banco"];
-$agencia     = $_POST["agencia"];
-$conta       = $_POST["conta"];
-$cheque_esp  = $_POST["cheque_esp"];
-$limite      = $_POST["limite"];
+$banco_rb       = $_POST["banco"];
+$agencia_rb     = $_POST["agencia"];
+$conta_rb       = $_POST["conta"];
+$cheque_esp_rb  = $_POST["cheque_esp"];
+$limite_rb      = $_POST["limite"];
 
 
 //Tabela Conjuge*
@@ -79,7 +79,7 @@ $cpf_co            = $_POST["cpf_co"];
 $empresa_co        = $_POST["empresa_co"];
 $funcao_co         = $_POST["funcao_co"];
 $tempo_serv_co     = $_POST["tempo_serv_co"];
-$telefone_co       = $_POST["telefone_co"];
+$celular_co       = $_POST["celular_co"];
 $rendimento_co     = $_POST["rendimento_co"];
 
 //Tabela Imovel
