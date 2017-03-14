@@ -109,7 +109,7 @@
                 </div>
             </div>
 <!-- FORMULÁRIO -->
-<form role="form" action="persistence.php" method="post">
+<form name="formA" role="form" action="persistence.php" method="post">
 <div class="container-fluid c-form-HUE">
                         <div class="row">
                         <div class="col-md-1"></div>
@@ -131,7 +131,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                            <input type="text" name="email" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="email" name="email" placeholder="Seu endereço de email..." class="c-form-email form-control" id="c-form-email" required>
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -144,7 +144,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="data_nasc" placeholder="Sua data de nascimento..." class="c-form-name form-control" id="c-form-name" required>
+                                <input type="date" name="data_nasc" placeholder="Sua data de nascimento..." class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -181,7 +181,7 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                                <input type="text" name="celular" placeholder="Seu número de telefone celular..." class="c-form-subject form-control" id="c-form-subject" required>
+                                <input type="number" name="celular" placeholder="Seu número de telefone celular..." min="0" class="c-form-subject form-control" id="c-form-subject" required>
                         </div>
                         </div>
                         <hr>
@@ -193,7 +193,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="cpf" placeholder="Seu CPF..." class="c-form-name form-control" id="c-form-name" required>
+                                <input type="number" name="cpf" placeholder="Seu CPF..." min="0" class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -204,7 +204,7 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                                <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                                <input type="number" name="rg" placeholder="Seu RG..." min="0" class="c-form-email form-control" id="c-form-email" required>
                         </div>
                         <div class="col-md-2 form-group">
                             <label for="formAname">
@@ -222,7 +222,10 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                                <input type="text" name="sexo" placeholder="Seu sexo..." class="c-form-email form-control" id="c-form-email" required>
+                            <select name="sexo" class="c-form-email form-control" id="c-form-email" required>
+                                <option value="homem">Homem</option>
+                                <option value="mulher">Mulher</option>
+                            </select>
                         </div>
                         <div class="col-md-2 form-group">
                             <label for="formAname">
@@ -230,7 +233,12 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                                <input type="text" name="est_civil" placeholder="Seu estado civil..." class="c-form-name form-control" id="c-form-name" required>
+                            <select name="est_civil" class="c-form-name form-control" id="c-form-name" required>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="viuvo">Viúvo(a)</option>
+                                <option value="outro">Outro</option>
+                            </select>
                         </div>
                         </div>
                         <div class="row">
@@ -240,7 +248,7 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                                <input type="text" name="num_dep" placeholder="Quantos dependentes..." class="c-form-subject form-control" id="c-form-subject" required>
+                                <input type="number" name="num_dep" placeholder="Quantos dependentes..." min="0" class="c-form-subject form-control" id="c-form-subject" required>
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -278,7 +286,11 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="profissao" placeholder="Sua profissão..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <select name="profissao" placeholder="Sua profissão..." class="c-form-subject form-control" id="c-form-subject" required>
+                                <option value="desempregado">Desempregado</option>
+                                <option value="autonomo">Autônomo</option>
+                                <option value="Empregado">Empregado</option>
+                            </select>
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -289,7 +301,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="rendimento" placeholder="Seu rendimento mensal..." class="c-form-name form-control" id="c-form-name" required>
+                                <input type="number" name="rendimento" placeholder="Seu rendimento mensal..." min="0" class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         </div>
                         <div class="row">
@@ -299,7 +311,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="rend_outros" placeholder="Rendimento mensal de outros..." class="c-form-email form-control" id="c-form-email"><br>&nbsp;
+                                <input type="number" name="rend_outros" placeholder="Rendimento mensal de outros..." min="0" class="c-form-email form-control" id="c-form-email"><br>&nbsp;
                         </div>
                         </div>
                         <!--FIM DOS CAMPOS-->
@@ -381,7 +393,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="cep" placeholder="Seu CEP..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="number" name="cep" placeholder="Seu CEP..." min="0" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -389,7 +401,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="casa_propria" placeholder="Tem casa própria?" class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="checkbox" name="casa_propria" placeholder="Tem casa própria?" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                         <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -397,7 +409,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="mora_sozinho" placeholder="Mora sozinho?" class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="checkbox" name="mora_sozinho" placeholder="Mora sozinho?" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     </div>
                     <div class="row">
@@ -415,7 +427,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="telefone" placeholder="Telefone fixo" class="c-form-name form-control" id="c-form-name">
+                            <input type="number" name="telefone" placeholder="Telefone fixo" min="0" class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>
                     
@@ -517,7 +529,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="cep_c" placeholder="CEP da empresa" class="c-form-subject form-control" id="c-form-subject">
+                            <input type="number" name="cep_c" placeholder="CEP da empresa" min="0" class="c-form-subject form-control" id="c-form-subject">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="formAname">
@@ -525,7 +537,12 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="tempo_c" placeholder="Tempo empregado" class="c-form-subject form-control" id="c-form-subject">
+                        <select name="tempo_c" class="c-form-subject form-control" id="c-form-subject">
+                            <option value="ate6meses">De 1 dia a 6 meses</option>
+                            <option value="ate2anos">De 6 meses a 2 anos</option>
+                            <option value="ate5anos">De 2 anos a 5 anos</option>
+                            <option value="maisde5">Mais de 5 anos</option>
+                        </select>
                     </div>
                     </div>
                     <div class="row">
@@ -535,7 +552,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="telefone_c" placeholder="Telefone da empresa" class="c-form-email form-control" id="c-form-email">
+                            <input type="number" name="telefone_c" placeholder="Telefone da empresa" min="0" class="c-form-email form-control" id="c-form-email">
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -543,7 +560,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="celular_c" placeholder="Celular comercial" class="c-form-name form-control" id="c-form-name">
+                            <input type="number" name="celular_c" placeholder="Celular comercial" min="0" class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>
                     <div class="row">
@@ -554,7 +571,7 @@
                         </label>
                     </div>
                     <div class="col-md-6">
-                        <input type="text" name="email_c" placeholder="Seu de e-mail comercial" class="c-form-email form-control" id="c-form-email">
+                        <input type="email" name="email_c" placeholder="Seu de e-mail comercial" class="c-form-email form-control" id="c-form-email">
                     </div>
                     <div class="col-md-3"></div>
                     </div>
@@ -630,7 +647,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="celular_rp1" placeholder="Celular deste amigo..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="number" name="celular_rp1" placeholder="Celular deste amigo..." min="0" class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     <div class="row">
@@ -658,7 +675,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="celular_rp2" placeholder="Celular deste amigo..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="number" name="celular_rp2" placeholder="Celular deste amigo..." min="0" class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
         </div>
@@ -721,10 +738,303 @@
                     </div>
                     </div>
                     
+                
+                
                     <!--FIM DOS CAMPOS-->
+                    
+                    <div class="container"><br><br><br></div>
+                    <a href="#bens" class="page-scroll btn btn-primary btn-xl sr-button">Próxima Seção</a>
+                
+                
+            &nbsp;
+            </div>
+            &nbsp;
+        <div class="row">   
+            <!--<div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x sr-contact"></i>
+                <p>123-456-6789</p>
+            </div>-->
+            <div class="col-lg-4 col-lg-offset-4 text-center">
+                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <h5><strong><a href="mailto:carchange@carchange.com.br">carchange@carchange.com.br</a></strong></h5>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class= "bg-primary no-padding c-form-container section-container-image-bg" id="refs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center c-form section-description wow fadeIn">
+                <h1><strong>Bens</strong></h1>
+                <!--<h2 class="section-heading">Let's Get In Touch!</h2>-->
+                <hr class="primary">
+                <h3 class="hidden-xs">Insira os dados nos campos abaixo.</h3>
+                <p class="visible-xs">Insira os dados nos campos abaixo.</p>
+                <!--<p>&nbsp;</p>-->
+                <!--<p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-8 col-sm-offset-2 text-center wow fadeIn">
+                    <br>
+                    <h2><strong>Imóveis</strong></h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        
+            <div class="container-fluid c-form-HUE">
+                    <div class="row">
+                    <div class="col-md-1 form-group">
+                        <label for="formAname">
+                            Espécie
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="especie_imovel" placeholder="Casa/apt/etc..." class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            Endereço
+                        </label>
+                    </div>                    
+                    <div class="col-md-4">
+                            <input type="text" name="end_imovel" placeholder="Endereço deste imóvel..." class="c-form-email form-control" id="c-form-email" required>
+                    </div>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Data de Aquisição
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="text" name="data_aquis" placeholder="Data de aquisição do imóvel" min="0" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Valor Venal
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="number" name="valor_venal" placeholder="Valor de venda (FIP)" min="0" class="c-form-name form-control" id="c-form-name">
+                    </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="formAmail">
+                            Valor da Dívida
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="number" name="valor_divida" placeholder="Valor da dívida do imóvel" class="c-form-email form-control" id="c-form-email">
+                    </div>
+        </div>
+        <br>        
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-8 col-sm-offset-2 text-center wow fadeIn">
+                    <br>
+                    <h2><strong>Carros</strong></h2>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+        
+            <div class="container-fluid c-form-HUE">
+                    <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Marca
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                            <input type="text" name="marca" placeholder="Marca do carro" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>                    
+                    <div class="row">
+                    <div class="col-md-1 form-group">
+                        <label for="formAmail">
+                            Modelo
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="modelo" placeholder="Modelo do carro" class="c-form-email form-control" id="c-form-email" required>
+                    </div>
+                    <div class="col-md-1 form-group">
+                        <label for="formAname">
+                            Ano
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                            <input type="text" name="ano" placeholder="Ano de compra do carro" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                    
+                    <!--FIM DOS CAMPOS-->
+                
                     <div class="container"><br><br></div>
-                    <a href="#endres" class="page-scroll btn btn-primary btn-xl sr-button">Próxima Seção</a>
+                    <a href="#conjuge" class="page-scroll btn btn-primary btn-xl sr-button">Próxima Seção</a>
+                
+            &nbsp;
+            </div>
+            &nbsp;
+        <div class="row">
+            <!--<div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x sr-contact"></i>
+                <p>123-456-6789</p>
+            </div>-->
+            <div class="col-lg-4 col-lg-offset-4 text-center">
+                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <h5><strong><a href="mailto:carchange@carchange.com.br">carchange@carchange.com.br</a></strong></h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class= "bg-primary no-padding c-form-container section-container-image-bg" id="endcom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center c-form section-description wow fadeIn">
+                <h1><strong>Cônjuge</strong></h1>
+                <!--<h2 class="section-heading">Let's Get In Touch!</h2>-->
+                <hr class="primary">
+                <h3 class="hidden-xs">Insira os dados nos campos abaixo.</h3>
+                <p class="visible-xs">Insira os dados nos campos abaixo.</p>
+                <!--<p>&nbsp;</p>-->
+                <!--<p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>-->
+            </div>
+        </div>
+
+            <div class="container-fluid c-form-HUE">
+                    <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Nome do Cônjuge
+                        </label>
+                    </div>
+                    <div class="col-md-9">
+                            <input type="text" name="nome_co" placeholder="Nome de seu cônjuge" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                
+                    <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Data de Nascimento do cônjuge
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="date" name="data_nasc_co" placeholder="Data de nasc. do cônjuge" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Naturalidade
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="text" name="natur_co" placeholder="Naturalidade do cônjuge" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            UF
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="text" name="uf_co" placeholder="UF de nasc. do cônjuge" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Nacionalidade
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                            <input type="text" name="nacio_co" placeholder="Nacionalidade do cônjuge" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            RG
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="number" name="rg_co" placeholder="RG do cônjuge" min="0" class="c-form-email form-control" id="c-form-email" required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Emissor RG
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="emissor_rg_co" placeholder="Órgão emissor" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            CPF
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="number" name="cpf_co" placeholder="CPF do cônjuge" min="0" class="c-form-email form-control" id="c-form-email" required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Empresa
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="empresa_co" placeholder="...que o cônjuge trabalha" class="c-form-name form-control" id="c-form-name">
+                    </div>
+                    </div>
+                
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            Função
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="funcao_co" placeholder="Função na empresa" class="c-form-email form-control" id="c-form-email">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Celular
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="number" name="celular_co" placeholder="N° celular" min="0" class="c-form-name form-control" id="c-form-name">
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            Tempo de Serviço
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="text" name="tempo_serv_co" placeholder="tempo de serviço" class="c-form-email form-control" id="c-form-email">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAname">
+                            Rendimento Mensal
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                            <input type="number" name="rendimento_co" placeholder="Rendimento mensal do cônjuge" min="0" class="c-form-name form-control" id="c-form-name">
+                    </div>
+                    </div>
+                
+                <!-- Botão Enviar Cadastro -->
                     <div class="row">
                         <button class="btn" type="submit">Enviar Cadastro</button>
                     </div>

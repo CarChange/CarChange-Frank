@@ -222,7 +222,7 @@ if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
         alert('Cadastro realizado com sucesso!');
-        window.location.href='index.html';
+        window.location.href='compras.html';
     </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
