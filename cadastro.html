@@ -183,14 +183,6 @@
                         <div class="col-md-4">
                                 <input type="text" name="celular" placeholder="Seu número de telefone celular..." class="c-form-subject form-control" id="c-form-subject" required>
                         </div>
-                        <div class="col-md-2 form-group">
-                            <label for="formAname">
-                                Telefone Fixo
-                            </label>
-                        </div>
-                        <div class="col-md-4">
-                                <input type="text" name="telefone" placeholder="Seu número de telefone fixo..." class="c-form-subject form-control" id="c-form-subject" required>
-                        </div>
                         </div>
                         <hr>
                         &nbsp;
@@ -272,7 +264,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="nome_pai" placeholder="Nome de seu pai..." class="c-form-email form-control" id="c-form-email" required>
+                                <input type="text" name="nome_pai" placeholder="Nome de seu pai..." class="c-form-email form-control" id="c-form-email">
                         </div>
                         <div class="col-md-3"></div>
                         </div>
@@ -307,7 +299,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                                <input type="text" name="rend_outros" placeholder="Rendimento mensal de outros..." class="c-form-email form-control" id="c-form-email" required><br>&nbsp;
+                                <input type="text" name="rend_outros" placeholder="Rendimento mensal de outros..." class="c-form-email form-control" id="c-form-email"><br>&nbsp;
                         </div>
                         </div>
                         <!--FIM DOS CAMPOS-->
@@ -349,11 +341,11 @@
                     <div class="row">
                     <div class="col-md-3 form-group">
                         <label for="formAname">
-                            Endereço completo
+                            Endereço Completo
                         </label>
                     </div>
                     <div class="col-md-9">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="rua" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     <div class="row">
@@ -363,7 +355,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="nacion" placeholder="Seu bairro..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="bairro" placeholder="Seu bairro..." class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAmail">
@@ -371,7 +363,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="natur" placeholder="Sua cidade..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="cidade" placeholder="Sua cidade..." class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-1 form-group">
                         <label>
@@ -379,7 +371,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                        <input type="text" name="uf" placeholder="UF" class="c-form-subject form-control" id="c-form-subject" required>
+                        <input type="text" name="uf_res" placeholder="UF de residência" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     </div>
                     <div class="row">
@@ -389,7 +381,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="celular" placeholder="Seu CEP..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="cep" placeholder="Seu CEP..." class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -397,7 +389,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="telefone" placeholder="Seu número de telefone fixo..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="casa_propria" placeholder="Tem casa própria?" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                         <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -405,7 +397,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="telefone" placeholder="Seu número de telefone fixo..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="mora_sozinho" placeholder="Mora sozinho?" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     </div>
                     <div class="row">
@@ -415,7 +407,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="tempo_res" placeholder="Reside a quanto tempo em sua casa?" class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -423,7 +415,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="telefone" placeholder="Telefone fixo" class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>
                     
@@ -469,7 +461,7 @@
                         </label>
                     </div>
                     <div class="col-md-9">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="empresa" placeholder="Nome da empresa" class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                 <div class="row">
@@ -479,7 +471,17 @@
                         </label>
                     </div>
                     <div class="col-md-9">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="funcao" placeholder="Sua função na empresa" class="c-form-name form-control" id="c-form-name" required>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-3 form-group">
+                        <label for="formAname">
+                            Endereço Completo
+                        </label>
+                    </div>
+                    <div class="col-md-9">
+                            <input type="text" name="rua_c" placeholder="Rua, nº lote/escritório..." class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>
                     <div class="row">
@@ -489,7 +491,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="nacion" placeholder="Seu bairro..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="bairro_c" placeholder="Bairro da empresa" class="c-form-subject form-control" id="c-form-subject">
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAmail">
@@ -497,7 +499,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="natur" placeholder="Sua cidade..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="cidade_c" placeholder="Cidade da empresa" class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-1 form-group">
                         <label>
@@ -505,7 +507,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                        <input type="text" name="uf" placeholder="UF" class="c-form-subject form-control" id="c-form-subject" required>
+                        <input type="text" name="uf_c" placeholder="UF da empresa" class="c-form-subject form-control" id="c-form-subject" required>
                     </div>
                     </div>
                     <div class="row">
@@ -515,7 +517,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="celular" placeholder="Seu CEP..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="cep_c" placeholder="CEP da empresa" class="c-form-subject form-control" id="c-form-subject">
                     </div>
                     <div class="col-md-3 form-group">
                         <label for="formAname">
@@ -523,7 +525,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="telefone" placeholder="Seu número de telefone fixo..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <input type="text" name="tempo_c" placeholder="Tempo empregado" class="c-form-subject form-control" id="c-form-subject">
                     </div>
                     </div>
                     <div class="row">
@@ -533,7 +535,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="telefone_c" placeholder="Telefone da empresa" class="c-form-email form-control" id="c-form-email">
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -541,8 +543,20 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="celular_c" placeholder="Celular comercial" class="c-form-name form-control" id="c-form-name">
                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 form-group">
+                        <label for="formAmail">
+                            Email Comercial
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" name="email_c" placeholder="Seu de e-mail comercial" class="c-form-email form-control" id="c-form-email">
+                    </div>
+                    <div class="col-md-3"></div>
                     </div>
                     
                     <!--FIM DOS CAMPOS-->
@@ -598,7 +612,7 @@
                         </label>
                     </div>
                     <div class="col-md-9">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="nome_rp1" placeholder="Nome de um amigo..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>                    
                     <div class="row">
@@ -608,7 +622,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="end_rp1" placeholder="Endereço deste amigo..." class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -616,7 +630,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="celular_rp1" placeholder="Celular deste amigo..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     <div class="row">
@@ -626,7 +640,7 @@
                         </label>
                     </div>
                     <div class="col-md-9">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="nome_rp2" placeholder="Nome de outro amigo..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     <div class="row">
@@ -636,7 +650,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="end_rp2" placeholder="Endereço deste amigo..." class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -644,7 +658,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="celular_rp2" placeholder="Celular deste amigo..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
         </div>
@@ -667,7 +681,7 @@
                         </label>
                     </div>
                     <div class="col-md-6">
-                            <input type="text" name="nome" placeholder="Rua, nº, ap/lote/casa..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="banco" placeholder="Nome do banco..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>                    
                     <div class="row">
@@ -677,7 +691,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="agencia" placeholder="Número da agência..." class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-1 form-group">
                         <label for="formAname">
@@ -685,7 +699,7 @@
                         </label>
                     </div>
                     <div class="col-md-6">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="conta" placeholder="Número de sua conta..." class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     <div class="row">
@@ -695,7 +709,7 @@
                         </label>
                     </div>
                     <div class="col-md-1">
-                            <input type="text" name="rg" placeholder="Seu RG..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="cheque_esp" placeholder="Qual o valor?" class="c-form-email form-control" id="c-form-email" required>
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAname">
@@ -703,7 +717,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="emissor_rg" placeholder="Órgão emissor..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="limite" placeholder="Qual o limite?" class="c-form-name form-control" id="c-form-name" required>
                     </div>
                     </div>
                     
