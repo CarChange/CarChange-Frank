@@ -5,21 +5,21 @@
 // variables for all of the templates so we only have to compile
 // them once on page load and can then use the same compiled 
 // templates many times
-var pagseguro_template, tabelas_template, planos_template, login_template;
+var pagseguro_template, tabelas_template, planos_template, login_template, consorcio_template;
 
 
 
 // a helper function that instantiates a template
 // and displays the results in the content div
-function showTemplate(template, data){
+function showTemplate(template, data) {
 	var html    = template(data);
 	$('#content').html(html);
-};
+}
 
 // document read gets called when the whole document
 // is loaded, so we put most of the code that needs to run
 // in here
-$(document).ready(function(){
+$(document).ready(function() {
 
 	//
 	// compile all of our templates ready for use
@@ -35,6 +35,9 @@ $(document).ready(function(){
 	
 	source   = $("#login-template").html();
 	login_template = Handlebars.compile(source);
+    
+    source   = $("#consorcio-template").html();
+    consorcio_template = Handlebars.compile(source);
 
 	// 
 	//  clicking on the albums tab shows the 
@@ -99,9 +102,30 @@ $(document).ready(function(){
 		$("#login-tab").addClass("active");
 	});
     
+    
 	// start the page by showing the albums view
 	// we do this by virtually clicking on the 
 	// albums tab
 	$("#pagseguro-tab").click();
 
+});
+
+
+//Mesma função das tabs, mas no botão inicial
+$("#pagseguro-tab").ready(function () { 
+       
+    $("#consorcio").click(function () {
+        // display the slideshow template using the 
+        // current album
+        showTemplate(consorcio_template);
+    });
+});
+
+$("#pagseguro-tab").ready(function () { 
+       
+    $("#consorcio-xs").click(function () {
+        // display the slideshow template using the 
+        // current album
+        showTemplate(consorcio_template);
+    });
 });

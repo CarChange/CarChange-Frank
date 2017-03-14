@@ -133,8 +133,8 @@
                     <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
                     <br>
                     <p>Clique no botão abaixo para adquirir.</p>
-                    
-                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <a id="consorcio" href="#"><img src="img/BotaoComprarMed.png" alt="Consorcio CarChange"></img></a>
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO
                         <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
                         <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
                         <input type="hidden" name="iot" value="button" />
@@ -147,8 +147,8 @@
                     <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
                     <br>
                     <p>Clique no botão abaixo para adquirir.</p>
-                    
-                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <a id="consorcio-xs" href="#"><img src="img/BotaoComprarMed.png" alt="Consorcio CarChange"></img></a>
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO
                         <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
                         <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
                         <input type="hidden" name="iot" value="button" />
@@ -192,14 +192,15 @@
           </div> <!-- / col -->
       
           <div class="col-md-4 jumbozineo1">
-              <h1>Pacote Franquia</h1>
+              <h1>Pct. Franquia</h1>
               <p>R$ <del>899,00</del> <b>399,00</b> <i>por tempo limitado</i></p>
               
               <h3>Capacite-se para lucrar.</h3>
               <br>
-              <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                <form action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
-                <input type="hidden" name="code" value="2313B44BC8C8F8A99473CF8CF2C0CE8A" />
+              <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post">
+                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <input type="hidden" name="itemCode" value="BA2F3ACC2020866114A9DFAAC0EB0618" />
                 <input type="hidden" name="iot" value="button" />
                 <input type="image" src="img/BotaoComprarMed.png" name="submit" alt="Pague com PagSeguro" width="120" height="53" />
                 </form>
@@ -222,13 +223,11 @@
   <div class="row">
     <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
     <!-- md-3 : medium and up displays use 3 grid columns per column -->
-    <div class="col-xs-12 col-md-3"> 
+    <div class="col-xs-12 col-md-12"> 
          <div class="caption">
             <h3>Opa</h3>
          </div>
     </div>
-       
-    </div> <!-- / col -->
 
   </div> <!-- / row -->
 </script>
@@ -259,6 +258,217 @@
       </div> <!-- / col -->
 
   </div> <!-- / row -->
+</script>
+
+<script id="consorcio-template" type="text/x-handlebars-template">
+<div class="container-fluid">
+  <div class="row">
+  <div class="container hidden-xs">
+    <div class="col-md-3"></div>
+    <div class="jumbotuntz col-md-12"> 
+            <h1>Escolha seu produto abaixo.</h1>
+    </div>
+  </div>
+  <div class="container visible-xs">
+    <div class="col-md-3"></div>
+    <div class="jumbotuntz-xs col-xs-12"> 
+            <h1>Escolha seu produto abaixo.</h1>
+    </div>
+  </div>
+  </div> <!-- / row -->
+<br><br>
+<div class="row">
+    <div class="container-fluid">
+        <!-- Declaração do formulário -->  
+        <form onsubmit="addDecimal();" target="pagseguro" method="post" name="form"  
+            action="https://pagseguro.uol.com.br/v2/checkout/cart.html?action=add">  
+            
+            <!-- Campos obrigatórios -->  
+            <input type="hidden" name="receiverEmail" value="consorcio.carchange@gmail.com">  
+            <input type="hidden" name="currency" value="BRL">  
+
+            <!-- Itens do pagamento (ao menos um item é obrigatório) -->  
+            <input type="hidden" name="itemId" value="0001">  
+            <input type="hidden" name="itemDescription" value="Consorcio CarChange">
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="487.62"><p>75% Moby Easy 1.0 flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="650.16"><p>Moby Easy 1.0 flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="938.28"><p>Novo Palio Sporting 1.6 flex 4p</p>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="504.45"><p>75% Palio Fire 1.0 flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="672.60"><p>Palio Fire 1.0 flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1012.53"><p>Novo Palio Sport / Dual 1.6 16v 4p</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="524.97"><p>75% UP! TakeUp 1.0 2p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="699.96"><p>UP! TakeUp 1.0 2p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1053.84"><p>Honda Fit LX - M/T</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="647.06"><p>75% Novo Uno Way 1.0 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="862.75"><p>Novo Uno Way 1.0 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1147.18"><p>New Fit LX - AT flex</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="575.60"><p>75% Gol TrendLine 1.0 2p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="767.48"><p>Gol TrendLine 1.0 2p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1170.94"><p>Honda City LX - AT flex</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="648.25"><p>75% Novo Palio Attractive 1.0 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="864.32"><p>Novo Palio Attractive 1.0 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1220.15"><p>Toyota Corolla GLI 1.8 flex mec</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="683.53"><p>75% Logan Authentique 1.0 16v 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="911.37"><p>Logan Authentique 1.0 16v 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1338.94"><p>Honda Fit EXL - CVT</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="639.09"><p>75% Novo Ka! 1.0</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="852.12"><p>Novo Ka! 1.0</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1335.90"><p>Honda HR-V LX - M/T</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="702.86"><p>75% Novo Palio Attractive 1.4 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="937.16"><p>Novo Palio Attractive 1.4 EVO flex 4p</p>
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1559.55"><p>Renegade Longitude 1.8 flex</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1557.68"><p>Cruze Ecotec 6 1.8 4p</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1610.46"><p>Honda Civic Sport CVT</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1661.20"><p>S-10 Cab. Dupla LS 4x2 2.4 flex</p>
+            </div>
+            </div>
+            
+            <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+            <input type="radio" name="itemAmount" value="1998.05"><p>HILLUX 4x4 Chassi - CS M/T</p>
+            </div>
+            </div>
+            
+            
+            <input type="hidden" name="itemQuantity" value="1">  
+            <input type="hidden" name="itemWeight" value="1000">  
+
+            <!-- Código de referência do pagamento no seu sistema (opcional) -->  
+            <input type="hidden" name="reference" value="REF1234">  
+
+            <!-- submit do form (obrigatório) -->
+            <br>
+            <input type="image" name="submit"   
+            src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/pagamentos/120x53-pagar.gif"   
+            alt="Pague com PagSeguro">  
+
+        </form>  
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" id="botoescompra">
+
+
+<script type="text/javascript"
+src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js">
+</script>
+
+
+    </div>
+</div>
+
+
+</div><!-- /container-fluid -->
 </script>
 
 </body>

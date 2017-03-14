@@ -288,6 +288,44 @@ img { max-width: 100%; }
   color: white;
 }
 
+.jumbotuntz {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin: auto;
+  color: inherit;
+  background-image: url('/assets/img/backgrounds/bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  margin-top: 13px;
+  border-style: solid;
+  border-color: #F05F40;
+  border-width: thin;
+  color: white;
+}
+
+.jumbotuntz-xs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  margin: auto;
+  color: inherit;
+  background-image: url('/assets/img/backgrounds/bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  margin-top: 13px;
+  border-style: solid;
+  border-color: #F05F40;
+  border-width: thin;
+  color: white;
+}
+
 .a-white {
   color: antiquewhite;
 }
