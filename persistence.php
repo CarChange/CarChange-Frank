@@ -106,11 +106,12 @@ if(strcmp($est_civil,"casado") == 0){
 
 $sql = "
 
-INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`) 
+INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
 
 VALUES 
 
-({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});
+('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
+
 
 INSERT INTO `inf_comercial`(`cep_c`, `empresa_c`, `rua_c`, `bairro_c`, `cidade_c`, `uf_c`, `funcao_c`, `tempo_c`, `telefone_c`, `email_c`, `celular_c`) 
 
