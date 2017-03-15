@@ -19,7 +19,7 @@ function showTemplate(template, data) {
 // document read gets called when the whole document
 // is loaded, so we put most of the code that needs to run
 // in here
-$(document).ready(function() {
+$(document).ready(function () {
 
 	//
 	// compile all of our templates ready for use
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 		// make the albums tab the active one
 		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
+		$(".nav .nav-tabs .active").removeClass("active");
 		// then make albums tab active
 		$("#pagseguro-tab").addClass("active");
 
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 		// make the photos tab the active one
 		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
+		$(".nav .nav-tabs .active").removeClass("active");
 		// then make photos tab active
 		$("#tabelas-tab").addClass("active");
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
+		$(".nav .nav-tabs .active").removeClass("active");
 		// then make slideshow tab active
 		$("#planos-tab").addClass("active");
 	});
@@ -97,7 +97,7 @@ $(document).ready(function() {
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
+		$(".nav .nav-tabs .active").removeClass("active");
 		// then make slideshow tab active
 		$("#login-tab").addClass("active");
 	});
@@ -107,22 +107,17 @@ $(document).ready(function() {
 	// we do this by virtually clicking on the 
 	// albums tab
 	$("#pagseguro-tab").click();
-
 });
 
 
 //Mesma função das tabs, mas no botão inicial
-$("#pagseguro-tab").ready(function () { 
-       
+$("#pagseguro-tab").ready(function () {
+    
     $("#consorcio").click(function () {
         // display the slideshow template using the 
         // current album
         showTemplate(consorcio_template);
     });
-});
-
-$("#pagseguro-tab").ready(function () { 
-       
     $("#consorcio-xs").click(function () {
         // display the slideshow template using the 
         // current album
