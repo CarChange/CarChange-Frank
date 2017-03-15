@@ -107,6 +107,7 @@ $(document).ready(function () {
 	// we do this by virtually clicking on the 
 	// albums tab
 	$("#pagseguro-tab").click();
+    
 });
 
 
