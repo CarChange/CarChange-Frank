@@ -101,7 +101,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-if(true/*strcmp($est_civil,"casado") == 0*/){
+if(strcmp($est_civil,"casado") == 0){
     
 
 $sql = "
@@ -163,7 +163,7 @@ VALUES
 ";
     
 }
-/*
+
 else{
     
 $sql = "
@@ -212,12 +212,12 @@ VALUES
 ";
     
 }
-*/   
+
 if ($conn->multi_query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Cadastro realizado com sucesso!');
-        window.location.href='compras.html';
+        alert('Seja bem-vindo à CarChange! Seu cadastro realizado com sucesso. Em breve entraremos em contato.');
+        window.location.href='index.html';
     </script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

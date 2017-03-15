@@ -21,7 +21,7 @@ $sql = "INSERT INTO `prospeccao`(`nome`, `telefone`, `email`) VALUES ('{$nome}',
 if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Por favor, complete seu cadastro.');
+        alert('Obrigado pelo interesse! Logo um representante entrará em contato.');
         window.location.href='index.html';
     </script>";
 } else {

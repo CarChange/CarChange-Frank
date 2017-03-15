@@ -73,7 +73,7 @@
                         <a class="page-scroll" href="#bens">Bens</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#conjuge">Cônjuge</a>
+                        <a class="hidden page-scroll" href="#conjuge" id="navbar-conjuge">Cônjuge</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#fim">Finalizar</a>
@@ -233,7 +233,7 @@
                             </label>
                         </div>
                         <div class="col-md-4">
-                            <select name="est_civil" class="c-form-name form-control" id="c-form-name" required>
+                            <select name="est_civil" class="c-form-name form-control" id="c-form-name" onchange="showHideConjuge(this)" required>
                                 <option value="solteiro">Solteiro(a)</option>
                                 <option value="casado">Casado(a)</option>
                                 <option value="viuvo">Viúvo(a)</option>
@@ -890,7 +890,7 @@
     </div>
 </section>
 
-<section class= "bg-primary no-padding c-form-container section-container-image-bg" id="conjuge">
+<section class= "hidden bg-primary no-padding c-form-container section-container-image-bg" id="conjuge">
     <div class="container">
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center c-form section-description wow fadeIn">
