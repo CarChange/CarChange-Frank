@@ -52,12 +52,12 @@ $celular_c   = $_POST["celular_c"];
 $email_c     = $_POST["email_c"];
 
 //Tabela Ref Pessoal
-$nome_rp      = $_POST["nome_rp1"];
-$endereco_rp       = $_POST["end_rp1"];
-$telefone_rp    = $_POST["celular_rp1"];
+$nome_rp       = $_POST["nome_rp1"];
+$endereco_rp   = $_POST["end_rp1"];
+$telefone_rp   = $_POST["celular_rp1"];
 $nome_rp2      = $_POST["nome_rp2"];
-$endereco_rp2       = $_POST["end_rp2"];
-$telefone_rp2   = $_POST["celular_rp2"];
+$endereco_rp2  = $_POST["end_rp2"];
+$telefone_rp2  = $_POST["celular_rp2"];
 
 //Tabela Ref Bancária
 $banco_rb       = $_POST["banco"];
@@ -72,14 +72,14 @@ $nome_co           = $_POST["nome_co"];
 $data_nasc_co      = $_POST["data_nasc_co"];
 $natur_co          = $_POST["natur_co"];
 $uf_co             = $_POST["uf_co"];
-$nacio_co          = $_POST["nacio_co"];
+$nacion_co         = $_POST["nacio_co"];
 $rg_co             = $_POST["rg_co"];
-$emissor_rg_co       = $_POST["emissor_rg_co"];
+$emissor_rg_co     = $_POST["emissor_rg_co"];
 $cpf_co            = $_POST["cpf_co"];
 $empresa_co        = $_POST["empresa_co"];
 $funcao_co         = $_POST["funcao_co"];
 $tempo_serv_co     = $_POST["tempo_serv_co"];
-$celular_co       = $_POST["celular_co"];
+$celular_co        = $_POST["celular_co"];
 $rendimento_co     = $_POST["rendimento_co"];
 
 //Tabela Imovel
@@ -101,7 +101,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-if(strcmp($est_civil,"casado") == 0){
+if(true/*strcmp($est_civil,"casado") == 0*/){
     
 
 $sql = "
@@ -112,6 +112,11 @@ VALUES
 
 ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
 
+INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`)
+
+VALUES 
+
+({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});
 
 INSERT INTO `inf_comercial`(`cep_c`, `empresa_c`, `rua_c`, `bairro_c`, `cidade_c`, `uf_c`, `funcao_c`, `tempo_c`, `telefone_c`, `email_c`, `celular_c`) 
 
@@ -157,7 +162,9 @@ VALUES
 
 ";
     
-}else{
+}
+/*
+else{
     
 $sql = "
 
@@ -205,8 +212,8 @@ VALUES
 ";
     
 }
-    
-if ($conn->query($sql) === TRUE) {
+*/   
+if ($conn->multi_query($sql) === TRUE) {
     //Msg
     echo "<script>
         alert('Cadastro realizado com sucesso!');
