@@ -52,12 +52,12 @@ $celular_c   = $_POST["celular_c"];
 $email_c     = $_POST["email_c"];
 
 //Tabela Ref Pessoal
-$nome_rp      = $_POST["nome_rp1"];
-$endereco_rp       = $_POST["end_rp1"];
-$telefone_rp    = $_POST["celular_rp1"];
+$nome_rp       = $_POST["nome_rp1"];
+$endereco_rp   = $_POST["end_rp1"];
+$telefone_rp   = $_POST["celular_rp1"];
 $nome_rp2      = $_POST["nome_rp2"];
-$endereco_rp2       = $_POST["end_rp2"];
-$telefone_rp2   = $_POST["celular_rp2"];
+$endereco_rp2  = $_POST["end_rp2"];
+$telefone_rp2  = $_POST["celular_rp2"];
 
 //Tabela Ref Bancária
 $banco_rb       = $_POST["banco"];
@@ -72,14 +72,14 @@ $nome_co           = $_POST["nome_co"];
 $data_nasc_co      = $_POST["data_nasc_co"];
 $natur_co          = $_POST["natur_co"];
 $uf_co             = $_POST["uf_co"];
-$nacio_co          = $_POST["nacio_co"];
+$nacion_co         = $_POST["nacio_co"];
 $rg_co             = $_POST["rg_co"];
-$emissor_rg_co       = $_POST["emissor_rg_co"];
+$emissor_rg_co     = $_POST["emissor_rg_co"];
 $cpf_co            = $_POST["cpf_co"];
 $empresa_co        = $_POST["empresa_co"];
 $funcao_co         = $_POST["funcao_co"];
 $tempo_serv_co     = $_POST["tempo_serv_co"];
-$celular_co       = $_POST["celular_co"];
+$celular_co        = $_POST["celular_co"];
 $rendimento_co     = $_POST["rendimento_co"];
 
 //Tabela Imovel
