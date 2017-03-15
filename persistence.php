@@ -112,7 +112,7 @@ VALUES
 
 ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
 
-INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`)
+INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf_res`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`)
 
 VALUES 
 
