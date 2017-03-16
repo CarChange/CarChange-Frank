@@ -100,48 +100,57 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-if(strcmp($est_civil,"casado") == 0){
-    
+}
 
-$sql = "
-
+$query_cliente = "
 INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
 
 VALUES 
 
 ('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
+";
 
+$query_endereco = "
 INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`)
 
 VALUES 
 
 ({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});
+";
 
+$query_comercial = "
 INSERT INTO `inf_comercial`(`cep_c`, `empresa_c`, `rua_c`, `bairro_c`, `cidade_c`, `uf_c`, `funcao_c`, `tempo_c`, `telefone_c`, `email_c`, `celular_c`) 
 
 VALUES 
 
 ('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');
+";
 
+$query_conjuge = "
 INSERT INTO `conjuge`(`cpf_co`, `nome_co`, `data_nasc_co`, `natur_co`, `uf_co`, `nacion_co`, `rg_co`, `emissor_rg_co`, `empresa_co`, `funcao_co`, `tempo_serv_co`, `celular_co`, `rendimento_co`)
 
 VALUES 
 
 ('{$cpf_co}','{$nome_co}','{$data_nasc_co}','{$natur_co}','{$uf_co}','{$nacion_co}','{$rg_co}','{$emissor_rg_co}','{$empresa_co}','{$funcao_co}','{$tempo_serv_co}','{$celular_co}','{$rendimento_co}');
+";
 
+$query_imovel = "
 INSERT INTO `imovel`(`especie_imovel`, `end_imovel`, `data_aquis`, `valor_venal`, `valor_divida`) 
 
 VALUES 
 
 ('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');
+";
 
+$query_carro = "
 INSERT INTO `carro`(`marca`, `modelo`, `ano`) 
 
 VALUES
 
  ('{$marca}','{$modelo}','{$ano}');
+";
 
+$query_pessoal = "
 INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
 
 VALUES
@@ -153,7 +162,9 @@ INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
 VALUES
 
 ('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');
+";
 
+$query_bancaria = "
 INSERT INTO `ref_bancaria`(`banco_rb`, `agencia_rb`, `conta_rb`, `cheque_esp_rb`, `limite_rb`)
 
 VALUES
@@ -161,57 +172,14 @@ VALUES
 ('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');
 
 ";
-    
-}
 
-else{
-    
-$sql = "
+$sql = $query_cliente . $query_endereco . query_pessoal . query_bancaria;
 
-INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
+if(strcmp($conjuge, "casado") == 0)         $sql .= $query_conjuge;
+if(strcmp($profissao, "desempregado") != 0) $sql .= $query_comercial;
+if(true)    $sql .= $query_imovel;
+if(true)    $sql .= $query_carro;
 
-VALUES 
-
-('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
-
-INSERT INTO `inf_comercial`(`cep_c`, `empresa_c`, `rua_c`, `bairro_c`, `cidade_c`, `uf_c`, `funcao_c`, `tempo_c`, `telefone_c`, `email_c`, `celular_c`) 
-
-VALUES 
-
-('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');
-
-INSERT INTO `imovel`(`especie_imovel`, `end_imovel`, `data_aquis`, `valor_venal`, `valor_divida`) 
-
-VALUES 
-
-('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');
-
-INSERT INTO `carro`(`marca`, `modelo`, `ano`) 
-
-VALUES
-
- ('{$marca}','{$modelo}','{$ano}');
-
-INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
-
-VALUES
-
-('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');
-
-INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
-
-VALUES
-
-('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');
-
-INSERT INTO `ref_bancaria`(`banco_rb`, `agencia_rb`, `conta_rb`, `cheque_esp_rb`, `limite_rb`)
-
-VALUES
-
-('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');
-";
-    
-}
 
 if ($conn->multi_query($sql) === TRUE) {
     //Msg
