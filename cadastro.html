@@ -64,7 +64,7 @@
                         <a class="page-scroll" href="#endres">Residencial</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#endcom">Comercial</a>
+                        <a class="page-scroll" href="#endcom" id="navbar-endcom">Comercial</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#refs">Referências</a>
@@ -294,7 +294,7 @@
                             </label>
                         </div>
                         <div class="col-md-6">
-                            <select name="profissao" placeholder="Sua profissão..." class="c-form-subject form-control" id="c-form-subject" required>
+                            <select name="profissao" placeholder="Sua profissão..." class="c-form-subject form-control" id="c-form-subject" onchange="showHideEmprego(this)" required>
                                 <option></option>
                                 <option value="desempregado">Desempregado</option>
                                 <option value="autonomo">Autônomo</option>
