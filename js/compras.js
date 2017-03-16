@@ -53,6 +53,24 @@ $(document).ready(function () {
 		$(".nav-tabs .active").removeClass("active");
 		// then make albums tab active
 		$("#pagseguro-tab").addClass("active");
+        
+        $("#consorcio").click(function () {
+        showTemplate(consorcio_template);
+		// make the slideshow tab the active one
+		// first make the currently active tab inactive
+		$(".nav-tabs .active").removeClass("active");
+		// then make slideshow tab active
+		
+        });
+
+        $("#consorcio-xs").click(function () {
+            showTemplate(consorcio_template);
+            // make the slideshow tab the active one
+            // first make the currently active tab inactive
+            $(".nav-tabs .active").removeClass("active");
+            // then make slideshow tab active
+
+        });
 
 	});
 
@@ -108,41 +126,4 @@ $(document).ready(function () {
 	// albums tab
 	$("#pagseguro-tab").click();
     
-});
-
-
-//Mesma função das tabs, mas no botão inicial
-/*$("#pagseguro-tab").ready(function () {
-    
-    $("#consorcio").click(function () {
-        // display the slideshow template using the 
-        // current album
-        showTemplate(consorcio_template);
-    });
-    $("#consorcio-xs").click(function () {
-        // display the slideshow template using the 
-        // current album
-        showTemplate(consorcio_template);
-    });
-});*/
-
-$("#pagseguro_tab").ready(function () {
-
-    $("#consorcio").click(function () {
-        showTemplate(consorcio_template);
-		// make the slideshow tab the active one
-		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
-		// then make slideshow tab active
-		
-    });
-    
-    $("#consorcio-xs").click(function () {
-        showTemplate(consorcio_template);
-		// make the slideshow tab the active one
-		// first make the currently active tab inactive
-		$(".nav-tabs .active").removeClass("active");
-		// then make slideshow tab active
-		
-    });
 });
