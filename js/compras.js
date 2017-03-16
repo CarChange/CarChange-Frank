@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 		// make the albums tab the active one
 		// first make the currently active tab inactive
-		$(".nav .nav-tabs .active").removeClass("active");
+		$(".nav-tabs .active").removeClass("active");
 		// then make albums tab active
 		$("#pagseguro-tab").addClass("active");
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
 		// make the photos tab the active one
 		// first make the currently active tab inactive
-		$(".nav .nav-tabs .active").removeClass("active");
+		$(".nav-tabs .active").removeClass("active");
 		// then make photos tab active
 		$("#tabelas-tab").addClass("active");
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
-		$(".nav .nav-tabs .active").removeClass("active");
+		$(".nav-tabs .active").removeClass("active");
 		// then make slideshow tab active
 		$("#planos-tab").addClass("active");
 	});
@@ -97,7 +97,7 @@ $(document).ready(function () {
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
-		$(".nav .nav-tabs .active").removeClass("active");
+		$(".nav-tabs .active").removeClass("active");
 		// then make slideshow tab active
 		$("#login-tab").addClass("active");
 	});
@@ -112,7 +112,7 @@ $(document).ready(function () {
 
 
 //Mesma função das tabs, mas no botão inicial
-$("#pagseguro-tab").ready(function () {
+/*$("#pagseguro-tab").ready(function () {
     
     $("#consorcio").click(function () {
         // display the slideshow template using the 
@@ -123,5 +123,26 @@ $("#pagseguro-tab").ready(function () {
         // display the slideshow template using the 
         // current album
         showTemplate(consorcio_template);
+    });
+});*/
+
+$("#pagseguro_tab").ready(function () {
+
+    $("#consorcio").click(function () {
+        showTemplate(consorcio_template);
+		// make the slideshow tab the active one
+		// first make the currently active tab inactive
+		$(".nav-tabs .active").removeClass("active");
+		// then make slideshow tab active
+		
+    });
+    
+    $("#consorcio-xs").click(function () {
+        showTemplate(consorcio_template);
+		// make the slideshow tab the active one
+		// first make the currently active tab inactive
+		$(".nav-tabs .active").removeClass("active");
+		// then make slideshow tab active
+		
     });
 });
