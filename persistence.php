@@ -184,7 +184,7 @@ if(true)    $sql .= $query_carro;
 if ($conn->multi_query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Seja bem-vindo à CarChange! Seu cadastro realizado com sucesso. Em breve entraremos em contato.');
+        alert('Seja bem-vindo a CarChange! Seu cadastro realizado com sucesso. Em breve entraremos em contato.');
         window.location.href='index.html';
     </script>";
 } else {
