@@ -83,6 +83,7 @@ $celular_co        = $_POST["celular_co"];
 $rendimento_co     = $_POST["rendimento_co"];
 
 //Tabela Imovel
+$tem_imovel         = $_POST["tem-imovel"];
 $especie_imovel     = $_POST["especie_imovel"];
 $end_imovel         = $_POST["end_imovel"];
 $data_aquis         = $_POST["data_aquis"];
@@ -90,9 +91,10 @@ $valor_venal        = $_POST["valor_venal"];
 $valor_divida       = $_POST["valor_venal"];
 
 //Tabela Carro
-$marca   = $_POST["marca"];
-$modelo  = $_POST["modelo"];
-$ano     = $_POST["ano"];
+$tem_carro  = $_POST["tem-carro"];
+$marca      = $_POST["marca"];
+$modelo     = $_POST["modelo"];
+$ano        = $_POST["ano"];
 
 
 // Create connection
@@ -177,8 +179,8 @@ $sql = $query_cliente . $query_endereco . query_pessoal . query_bancaria;
 
 if(strcmp($conjuge, "casado") == 0)         $sql .= $query_conjuge;
 if(strcmp($profissao, "desempregado") != 0) $sql .= $query_comercial;
-if(true)    $sql .= $query_imovel;
-if(true)    $sql .= $query_carro;
+if(strcmp($tem_imovel, "sim") == 0)         $sql .= $query_imovel;
+if(strcmp($tem_carro, "sim") == 0)          $sql .= $query_carro;
 
 
 if ($conn->multi_query($sql) === TRUE) {

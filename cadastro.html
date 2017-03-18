@@ -794,6 +794,19 @@
         </div>
         
             <div class="container-fluid c-form-HUE">
+                <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 form-group">
+                    <h3 class="text-center">Possui Imóvel?</h3>
+                        <select select name="tem-imovel" class="c-form-email form-control" id="c-form-email" onchange="showHideImovel(this)" required>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    <p>&nbsp;</p>
+                </div>
+                </div>
+                    
+                <div id="form-imovel">
                     <div class="row">
                     <div class="col-md-1 form-group">
                         <label for="formAname">
@@ -801,7 +814,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="especie_imovel" placeholder="Casa/apt/etc..." class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="especie_imovel" placeholder="Casa/apt/etc..." class="c-form-name form-control" id="c-form-name">
                     </div>
                     <div class="col-md-2 form-group">
                         <label for="formAmail">
@@ -809,7 +822,7 @@
                         </label>
                     </div>                    
                     <div class="col-md-4">
-                            <input type="text" name="end_imovel" placeholder="Endereço deste imóvel..." class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="end_imovel" placeholder="Endereço deste imóvel..." class="c-form-email form-control" id="c-form-email">
                     </div>
                     </div>
                     <div class="col-md-2 form-group">
@@ -818,7 +831,7 @@
                         </label>
                     </div>
                     <div class="col-md-3">
-                            <input type="text" name="data_aquis" placeholder="Data de aquisição do imóvel" min="0" class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="data_aquis" placeholder="Data de aquisição do imóvel" min="0" class="c-form-name form-control" id="c-form-name">
                     </div>
                     <div class="row">
                     <div class="col-md-2 form-group">
@@ -838,6 +851,7 @@
                     <div class="col-md-4">
                             <input type="number" name="valor_divida" placeholder="Valor da dívida do imóvel" class="c-form-email form-control" id="c-form-email" min="0">
                     </div>
+                </div>
         </div>
         <br>        
         <div class="row">
@@ -849,8 +863,19 @@
                 </div>
             </div>
         </div>
-        
             <div class="container-fluid c-form-HUE">
+                <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 form-group">
+                    <h3 class="text-center">Possui Carro?</h3>
+                        <select name="tem-carro" class="c-form-email form-control" id="c-form-email" onchange="showHideCarro(this)" required>
+                            <option value="sim">Sim</option>
+                            <option value="nao">Não</option>
+                        </select>
+                    <p>&nbsp;</p>
+                </div>
+                </div>
+                <div id="form-carro">
                     <div class="row">
                     <div class="col-md-3 form-group">
                         <label for="formAname">
@@ -858,7 +883,7 @@
                         </label>
                     </div>
                     <div class="col-md-6">
-                            <input type="text" name="marca" placeholder="Marca do carro" class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="marca" placeholder="Marca do carro" class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>                    
                     <div class="row">
@@ -868,7 +893,7 @@
                         </label>
                     </div>
                     <div class="col-md-4">
-                            <input type="text" name="modelo" placeholder="Modelo do carro" class="c-form-email form-control" id="c-form-email" required>
+                            <input type="text" name="modelo" placeholder="Modelo do carro" class="c-form-email form-control" id="c-form-email">
                     </div>
                     <div class="col-md-1 form-group">
                         <label for="formAname">
@@ -876,10 +901,11 @@
                         </label>
                     </div>
                     <div class="col-md-6">
-                            <input type="text" name="ano" placeholder="Ano de compra do carro" class="c-form-name form-control" id="c-form-name" required>
+                            <input type="text" name="ano" placeholder="Ano de compra do carro" class="c-form-name form-control" id="c-form-name">
                     </div>
                     </div>
-                    
+                </div>
+                
                     <!--FIM DOS CAMPOS-->
                 
                     
@@ -1086,7 +1112,6 @@
     
     <!-- Cadastro.js -->
     <script src="js/cadastro.js"></script>
-    <script src="js/cadastro2.js"></script>
     
     <!--[if lt IE 10]>
         <script src="assets/js/placeholder.js"></script>
