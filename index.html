@@ -72,7 +72,10 @@
                         <a class="page-scroll" href="#contact">Faça parte</a>
                     </li>
                     <li>
-                        <a class="btn-primary" style="color:black;" data-toggle="modal" href="#loginmodal">Login</a>
+                        <a class="hidden btn-primary" style="color:black;" data-toggle="modal" href="#loginmodal">Login</a>
+                    </li>
+                    <li>
+                        <a class="btn-success" style="color:black" href="compras.html">Comprar</a>
                     </li>
                 </ul>
             </div>
@@ -137,7 +140,7 @@
         </div>
         <div class="modal-body" style="padding: 0px 50px;">
             <h3 class="darkHeader justified">Ao pagar um financiamento você garante o usufruto de um veículo, mas paga no total mais de 2x o valor de mercado dele.</h3>
-            <h3 class="darkHeader"><strong>Fuja do "pague 2, leve 1".</strong></h3>
+            <h3 class="darkHeader"><strong>Fuja do<br>"pague 2, leve 1".</strong></h3>
             <br>
           <!--<form role="form">
             <div class="form-group">
@@ -230,21 +233,21 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4>Área de Associados</h4>
         </div>
-        <div class="modal-body" style="padding: 0px 50px;">
+        <div class="modal-body" style="padding: 0px 0px; width: 60%; margin: auto;">
             
           <form role="form">
             <div class="form-group">
               <label for="usrname" style="color:black;"><span class="glyphicon glyphicon-user"></span> Usuário</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Seu CPF...">
+              <input name="user" type="text" class="form-control" id="usrname" placeholder="Seu CPF...">
             </div>
             <div class="form-group">
               <label for="psw" style="color:black;"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>
-              <input type="date" class="form-control" id="psw" placeholder="Sua data de nascimento...">
+              <input name="pass" type="date" class="form-control" id="psw" placeholder="Sua data de nascimento...">
             </div>
             <!--<div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
             </div>-->
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <br><button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
               <br>
           </form>
         </div>
@@ -453,25 +456,55 @@
                         </div>
                         <div class="col-md-3"></div>
                         </div>
-                        <div class="row">
+                        <div class="row hidden-sm hidden-xs">
                         <div class="col-md-1"></div>
                         <div class="col-md-2 form-group">
                             <label>
                                 DDD
                             </label>
                         </div>
-                        <div class="col-md-1">
+                        <div class="hidden-sm hidden-xs col-md-2" style="padding-right:50px">
                                 <input type="number" name="DDD" placeholder="nº" class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         <div class="col-md-1 form-group">
                             <label for="formAname">
-                                Tefelone
+                                Telefone
                             </label>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                                 <input type="text" name="telefone" placeholder="Seu telefone..." class="c-form-name form-control" id="c-form-name" required>
                         </div>
                         <div class="col-md-1"></div>
+                        </div>
+                        <div class="row visible-sm">
+                        <div class="col-xs-12 form-group">
+                            <label>
+                                DDD
+                            </label>
+                        </div>
+                        <div class="col-xs-2" style="">
+                                <input type="number" name="DDD" placeholder="nº" class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        </div>
+                        <div class="row visible-xs">
+                        <div class="col-xs-12 form-group">
+                            <label>
+                                DDD
+                            </label>
+                        </div>
+                        <div class="col-xs-4" style="">
+                                <input type="number" name="DDD" placeholder="nº" class="c-form-name form-control" id="c-form-name" required>
+                        </div>
+                        </div>
+                        <div class="row visible-sm visible-xs">
+                        <div class="col-md-1 form-group">
+                            <label for="formAname">
+                                Telefone
+                            </label>
+                        </div>
+                        <div class="col-xs-8">
+                                <input type="text" name="telefone" placeholder="Seu telefone..." class="c-form-name form-control" id="c-form-name" required>
+                        </div>
                         </div>
                         
                         <button class="btn btn-success" type="submit" href="cadastro.html">Enviar</button>
