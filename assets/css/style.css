@@ -175,7 +175,7 @@ img { max-width: 100%; }
 .c-form-HUE textarea.form-control {
 	height: 50px;
     margin-bottom: 30px;
-    padding: 0 20px;
+    padding: 0 10px;
     vertical-align: middle;
     background: #fff;
     border: 3px solid #fff;
@@ -567,4 +567,6 @@ hr.thin {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
+    width: 100%;
+    min-height: 100%;
 }

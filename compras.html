@@ -101,7 +101,7 @@
     <li id="pagseguro-tab" role="" class="active"><a href="#">Pagseguro</a></li>
     <li id="tabelas-tab"  role=""><a href="#">Tabelas</a></li>
     <li id="planos-tab" role=""><a href="#">Planos</a></li>
-    <li id="login-tab" role="" class="hidden"><a href="#">Login</a></li>
+    <li id="cadastro-tab" role=""><a href="cadastro.html">Cadastro</a></li>
  </ul>
   </div>
     </div>
@@ -130,8 +130,8 @@
     <div class="container">
             <div class="jumbotron hidden-xs">
                     <h1>Consórcio CarChange</h1>
-                    <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
-                    <br>
+                    <h3><strong>O consórcio mais acessível e vantajoso do Brasil.</strong></h3>
+                    <!--<br>
                     <p>Clique no botão abaixo para adquirir.</p>
                     <a href="#"><img id="consorcio" src="img/BotaoComprarMed.png" alt="Consorcio CarChange"></img></a>
                     <!-- INICIO FORMULARIO BOTAO PAGSEGURO: NAO EDITE OS COMANDOS DAS LINHAS ABAIXO
@@ -144,7 +144,7 @@
             </div>
             <div class="jumbotron-xs visible-xs">
                     <h1>Consórcio CarChange</h1>
-                    <h3><strong>O consórcio mais barato e vantajoso do Brasil.</strong></h3>
+                    <h3><strong>O consórcio mais acessível e vantajoso do Brasil.</strong></h3>
                     <br>
                     <p>Clique no botão abaixo para adquirir.</p>
                     <a href="#"><img id="consorcio-xs" src="img/BotaoComprarMed.png" alt="Consorcio CarChange"></img></a>
@@ -161,7 +161,7 @@
 </div>
   <div class="row">
       <div class="container">
-          <div class="col-md-4 jumbozineo1">
+          <div class="col-md-6 jumbozineo1">
             <h1>LifeChange</h1>
             <p>R$ 99,00 / mês</p>
             <h3><strong>Administre sua Franquia.</strong></h3>
@@ -176,7 +176,7 @@
           <br><hr class="visible-xs"><br>
           </div>
 
-          <div class="col-md-4 jumbozineo1">
+          <div class="col-md-6 jumbozineo1">
               <h1>SmartChange</h1>
               <p>R$ 39,00 / mês</p>
               <h3>Um clube de vantagens.</h3>
@@ -191,7 +191,7 @@
           <br><hr class="visible-xs"><br>
           </div> <!-- / col -->
       
-          <div class="col-md-4 jumbozineo1">
+          <div class="hidden jumbozineo1">
               <h1>Pct. Franquia</h1>
               <p>R$ <del>899,00</del> <b>399,00</b> <i>por tempo limitado</i></p>
               
@@ -220,6 +220,7 @@
     a description
 -->
 <script id="tabelas-template" type="text/x-handlebars-template">
+<div class="container-fluid">
   <div class="row">
     <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
     <!-- md-3 : medium and up displays use 3 grid columns per column -->
@@ -230,6 +231,7 @@
     </div>
 
   </div> <!-- / row -->
+</div> <!-- / container-fluid -->
 </script>
 
 <!-- this is the template for the view a single photo -->
@@ -237,15 +239,18 @@
     It is displayed as a large image with title and description
 -->
 <script id="planos-template" type="text/x-handlebars-template">
+<div class="container-fluid">
   <div class="row">
+    <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
+    <!-- md-3 : medium and up displays use 3 grid columns per column -->
     <div class="col-xs-12 col-md-12"> 
-          
-        <div class="caption">
+         <div class="caption">
             <h3>Uuups</h3>
-        </div>
-      </div> <!-- / col -->
+         </div>
+    </div>
 
   </div> <!-- / row -->
+</div> <!-- / container-fluid -->
 </script>
     
 <script id="login-template" type="text/x-handlebars-template">
