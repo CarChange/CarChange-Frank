@@ -8,7 +8,7 @@ $dbname = "u427946632_carc";
 $nome          = $_POST["nome"];
 $email         = $_POST["email"];
 $telefone      = $_POST["telefone"];
-$DDD           = $_POST["DDD"];
+$ddd           = $_POST["DDD"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,7 +17,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `prospeccao`(`nome`, `telefone`, `email`) VALUES ('{$nome}','{$DDD.$telefone}','{$email}')";
+$sql = "INSERT INTO `prospeccao`(`nome`, `telefone`, `email`) VALUES ('{$nome}','{$ddd.$telefone}','{$email}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
