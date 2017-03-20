@@ -8,7 +8,7 @@ $dbname = "u427946632_carc";
 $nome          = $_POST["nome"];
 $email         = $_POST["email"];
 $telefone      = $_POST["telefone"];
-$DDD$DDD           = $_POST["DDD"];
+$DDD           = $_POST["DDD"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
