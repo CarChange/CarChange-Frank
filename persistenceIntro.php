@@ -21,7 +21,8 @@ $fke = "for key 'email'";
 //ID cliente:
 $surname = explode(' ', $sobrenome);
 $lastname = $surname[count($surname)-1];
-$id_cliente = '17C' . substr($telefone, -4) . $nome{0} . $lastname{0};
+echo $lastname;
+$id_cliente = '17C' . substr($telefone, -4) . $nome[0] . $lastname[0];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
