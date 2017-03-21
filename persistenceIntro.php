@@ -36,6 +36,8 @@ if ($conn->query($sql) === TRUE) {
         alert('Atenção: E-mail já cadastrado.');
         window.location.href='index.html';
     </script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
