@@ -191,6 +191,27 @@ img { max-width: 100%; }
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
+.c-form-HUE input[type="tel"],
+.c-form-HUE textarea,
+.c-form-HUE textarea.form-control {
+	height: 50px;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    vertical-align: middle;
+    background: #fff;
+    border: 3px solid #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: oblique;
+    
+    font-weight: 500;
+    line-height: 50px;
+    color: #000;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
 .c-form-HUE select,
 .c-form-HUE textarea,
 .c-form-HUE textarea.form-control {
@@ -279,6 +300,25 @@ img { max-width: 100%; }
   color: #bbb;
 }*/
 
+.c-form-HUE input[type="date"]:focus,
+.c-form-HUE textarea:focus,
+.c-form-HUE textarea.form-control:focus {
+	outline: 0; background: #fff; border: 3px solid #e8643e;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+}
+
+.c-form-HUE input[type="date"]::-moz-placeholder, 
+.c-form-HUE textarea::-moz-placeholder, 
+.c-form-HUE textarea.form-control::-moz-placeholder { color: #bbb; font-style: italic; }
+
+.c-form-HUE input[type="date"]:-ms-input-placeholder, 
+.c-form-HUE textarea:-ms-input-placeholder, 
+.c-form-HUE textarea.form-control:-ms-input-placeholder { color: #bbb; font-style: italic; }
+
+.c-form-HUE input[type="date"]::-webkit-input-placeholder, 
+.c-form-HUE textarea::-webkit-input-placeholder, 
+.c-form-HUE textarea.form-control::-webkit-input-placeholder { color: #bbb; font-style: italic; }
+
 .c-form-HUE input[type="number"]:focus,
 .c-form-HUE textarea:focus,
 .c-form-HUE textarea.form-control:focus {
@@ -298,24 +338,25 @@ img { max-width: 100%; }
 .c-form-HUE textarea::-webkit-input-placeholder, 
 .c-form-HUE textarea.form-control::-webkit-input-placeholder { color: #bbb; font-style: italic; }
 
-.c-form-HUE input[type="date"]:focus,
+.c-form-HUE input[type="tel"]:focus,
 .c-form-HUE textarea:focus,
 .c-form-HUE textarea.form-control:focus {
 	outline: 0; background: #fff; border: 3px solid #e8643e;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
 }
 
-.c-form-HUE input[type="date"]::-moz-placeholder, 
+.c-form-HUE input[type="tel"]::-moz-placeholder, 
 .c-form-HUE textarea::-moz-placeholder, 
 .c-form-HUE textarea.form-control::-moz-placeholder { color: #bbb; font-style: italic; }
 
-.c-form-HUE input[type="date"]:-ms-input-placeholder, 
+.c-form-HUE input[type="tel"]:-ms-input-placeholder, 
 .c-form-HUE textarea:-ms-input-placeholder, 
 .c-form-HUE textarea.form-control:-ms-input-placeholder { color: #bbb; font-style: italic; }
 
-.c-form-HUE input[type="date"]::-webkit-input-placeholder, 
+.c-form-HUE input[type="tel"]::-webkit-input-placeholder, 
 .c-form-HUE textarea::-webkit-input-placeholder, 
 .c-form-HUE textarea.form-control::-webkit-input-placeholder { color: #bbb; font-style: italic; }
+
 
 .c-form-HUE select:focus,
 .c-form-HUE textarea:focus,
