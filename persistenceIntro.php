@@ -12,6 +12,8 @@ $telefone      = $_POST["telefone"];
 $ddd           = $_POST["DDD"];
 $tel_completo  = $ddd . $telefone;
 
+$nome .= ' ' . $sobrenome;
+
 //Probable error
 $de  = "Duplicate entry";
 $fke = "for key 'email'";
@@ -28,7 +30,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `prospeccao`(`nome`, `telefone`, `email`) VALUES ('{$nome}','{$tel_completo}','{$email}')";
+$sql = "INSERT INTO `prospeccao`(`id_cliente`, `nome`, `telefone`, `email`) VALUES ('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
