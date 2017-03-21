@@ -11,6 +11,10 @@ $telefone      = $_POST["telefone"];
 $ddd           = $_POST["DDD"];
 $tel_completo  = $ddd . $telefone;
 
+//Probable error
+$de  = "Duplicate entry";
+$fke = "for key 'email'";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -26,8 +30,11 @@ if ($conn->query($sql) === TRUE) {
         alert('Obrigado pelo interesse! Logo um representante entrará em contato.');
         window.location.href='index.html';
     </script>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+} else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fke) !== false)){
+    //Msg de email repetido
+    echo "<script>
+        alert('Atenção: E-mail já cadastrado.');
+    </script>";
 }
 
 $conn->close();
