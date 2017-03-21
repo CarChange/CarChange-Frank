@@ -34,6 +34,7 @@ if ($conn->query($sql) === TRUE) {
     //Msg de email repetido
     echo "<script>
         alert('Atenção: E-mail já cadastrado.');
+        window.location.href='index.html';
     </script>";
 }
 
