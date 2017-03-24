@@ -1,9 +1,7 @@
 <?php
 // Server Data
-$servername = "localhost";
-$username = "u427946632_admin";
-$password = "oseompenmf231";
-$dbname = "u427946632_carc";
+include("config.php");
+include("query.php");
 //Form Data
 $nome          = mb_strtoupper($_POST["nome"]);
 $sobrenome     = mb_strtoupper($_POST["sobrenome"]);
@@ -12,7 +10,8 @@ $telefone      = $_POST["telefone"];
 $ddd           = $_POST["DDD"];
 $tel_completo  = $ddd . $telefone;
 
-$nome .= ' ' . $sobrenome;
+if(!empty($nome))
+    $nome .= ' ' . $sobrenome;
 
 //Probable error
 $de  = "Duplicate entry";
@@ -24,18 +23,19 @@ $lastname = $surname[count($surname)-1];
 $id_cliente = '17C' . substr($telefone, -4) . $nome[0] . $lastname[0];
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
+console.log("Não estou conectando diretamente com o BD.");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `prospeccao`(`id_cliente`, `nome`, `telefone`, `email`) VALUES ('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
+$sql = $prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Obrigado pelo interesse! Logo um representante entrará em contato.');
+        alert('Obrigado pelo interesse! Logo um representante entrará em contato. <br> teste');
         window.location.href='index.html';
     </script>";
 } else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fke) !== false)){
@@ -45,7 +45,8 @@ if ($conn->query($sql) === TRUE) {
         window.location.href='index.html';
     </script>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    
+    echo "Error: <br>" . $conn->error;
 }
 
 $conn->close();
