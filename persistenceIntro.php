@@ -35,7 +35,7 @@ $sql = $prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}'
 if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Obrigado pelo interesse! Logo um representante entrará em contato.');
+        alert('Obrigado pelo interesse! Logo um representante entrará em contato. <br> teste');
         window.location.href='index.html';
     </script>";
 } else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fke) !== false)){
