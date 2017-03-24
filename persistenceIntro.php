@@ -1,9 +1,7 @@
 <?php
 // Server Data
-$servername = "localhost";
-$username = "u427946632_admin";
-$password = "oseompenmf231";
-$dbname = "u427946632_carc";
+include("config.php");
+include("query.php");
 //Form Data
 $nome          = mb_strtoupper($_POST["nome"]);
 $sobrenome     = mb_strtoupper($_POST["sobrenome"]);
@@ -24,13 +22,13 @@ $lastname = $surname[count($surname)-1];
 $id_cliente = '17C' . substr($telefone, -4) . $nome[0] . $lastname[0];
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO `prospeccao`(`id_cliente`, `nome`, `telefone`, `email`) VALUES ('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
+$sql = prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
