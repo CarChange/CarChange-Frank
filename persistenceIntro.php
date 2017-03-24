@@ -11,13 +11,14 @@ $ddd           = $_POST["DDD"];
 $tel_completo  = $ddd . $telefone;
 
 if(empty($nome) || empty($sobrenome) || empty($email) || empty($telefone) || empty($ddd)) {
+    //Msg caso alg entre diretamente em 'persistenceIntro.php'
     echo "<script>
             alert('Há campos não preenchidos!');
             window.location.href='index.html';
         </script>";
 }
 
-$nome .= ' ' . $sobrenome;
+    $nome .= ' ' . $sobrenome;
 
 //Probable error
 $de  = "Duplicate entry";
@@ -36,7 +37,6 @@ if ($conn->connect_error) {
 } 
 
 $sql = $prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
-
 
 if ($conn->query($sql) === TRUE) {
     //Msg
