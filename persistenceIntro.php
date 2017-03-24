@@ -16,6 +16,7 @@ if(empty($nome) || empty($sobrenome) || empty($email) || empty($telefone) || emp
             alert('Há campos não preenchidos!');
             window.location.href='index.html';
         </script>";
+    exit(900); //um erro qualquer //TODO: definir erro.
 }
 
     $nome .= ' ' . $sobrenome;
