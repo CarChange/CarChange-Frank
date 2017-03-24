@@ -1,3 +1,5 @@
 node_modules
 bower_components
 autocompleteste.*
+config.php
+query.php
