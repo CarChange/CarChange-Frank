@@ -19,7 +19,7 @@ if(empty($nome) || empty($sobrenome) || empty($email) || empty($telefone) || emp
     exit(900); //um erro qualquer //TODO: definir erro.
 }
 
-    $nome .= ' ' . $sobrenome;
+$nome .= ' ' . $sobrenome;
 
 //Probable error
 $de  = "Duplicate entry";
@@ -45,15 +45,17 @@ if ($conn->query($sql) === TRUE) {
         alert('Obrigado pelo interesse! Logo um representante entrará em contato. <br> teste');
         window.location.href='index.html';
     </script>";
+    exit();
 } else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fke) !== false)){
     //Msg de email repetido
     echo "<script>
         alert('Atenção: E-mail já cadastrado.');
         window.location.href='index.html';
     </script>";
+    die();
 } else {
-    
     echo "Error: <br>" . $conn->error;
+    die();
 }
 
 $conn->close();
