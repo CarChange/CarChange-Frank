@@ -10,7 +10,8 @@ $telefone      = $_POST["telefone"];
 $ddd           = $_POST["DDD"];
 $tel_completo  = $ddd . $telefone;
 
-$nome .= ' ' . $sobrenome;
+if(!empty($nome))
+    $nome .= ' ' . $sobrenome;
 
 //Probable error
 $de  = "Duplicate entry";
@@ -23,12 +24,13 @@ $id_cliente = '17C' . substr($telefone, -4) . $nome[0] . $lastname[0];
 
 // Create connection
 //$conn = new mysqli($servername, $username, $password, $dbname);
+console.log("Não estou conectando diretamente com o BD.");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
+$sql = $prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}')";
 
 if ($conn->query($sql) === TRUE) {
     //Msg
@@ -43,7 +45,8 @@ if ($conn->query($sql) === TRUE) {
         window.location.href='index.html';
     </script>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    
+    echo "Error: <br>" . $conn->error;
 }
 
 $conn->close();
