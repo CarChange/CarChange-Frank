@@ -1,9 +1,7 @@
 <?php
 // Server Data
-$servername = "localhost";
-$username = "u427946632_admin";
-$password = "oseompenmf231";
-$dbname = "u427946632_carc";
+include("config.php");
+include("query.php");
 //Form Data
 
 //Tabela Cliente
@@ -104,76 +102,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query_cliente = "
-INSERT INTO `cliente`(`cpf`, `nome`, `email`, `celular`, `data_nasc`, `nacion`, `natur`, `uf`, `est_civil`, `sexo`, `num_dep`, `rg`, `emissor_rg`, `profissao`, `nome_pai`, `nome_mae`, `rendimento`, `rend_outros`) 
+$query_cliente = cliente_q . "'{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');";
 
-VALUES 
+$query_endereco = $endereco_q . "({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});";
 
-('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}'   ,'{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');
-";
+$query_comercial = comercial_q . "('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');";
 
-$query_endereco = "
-INSERT INTO `endereco`(`cep`, `rua`, `bairro`, `cidade`, `uf`, `tempo_res`, `telefone`, `casa_propria`, `mora_sozinho`)
+$query_conjuge = conjuge_q . "('{$cpf_co}','{$nome_co}','{$data_nasc_co}','{$natur_co}','{$uf_co}','{$nacion_co}','{$rg_co}','{$emissor_rg_co}','{$empresa_co}','{$funcao_co}','{$tempo_serv_co}','{$celular_co}','{$rendimento_co}');";
 
-VALUES 
+$query_imovel = imovel_q . "('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');";
 
-({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});
-";
+$query_carro = carro_q . "('{$marca}','{$modelo}','{$ano}');";
 
-$query_comercial = "
-INSERT INTO `inf_comercial`(`cep_c`, `empresa_c`, `rua_c`, `bairro_c`, `cidade_c`, `uf_c`, `funcao_c`, `tempo_c`, `telefone_c`, `email_c`, `celular_c`) 
+$query_pessoal = pessoal_q . "('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');" . pessoal_q . "('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');";
 
-VALUES 
-
-('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');
-";
-
-$query_conjuge = "
-INSERT INTO `conjuge`(`cpf_co`, `nome_co`, `data_nasc_co`, `natur_co`, `uf_co`, `nacion_co`, `rg_co`, `emissor_rg_co`, `empresa_co`, `funcao_co`, `tempo_serv_co`, `celular_co`, `rendimento_co`)
-
-VALUES 
-
-('{$cpf_co}','{$nome_co}','{$data_nasc_co}','{$natur_co}','{$uf_co}','{$nacion_co}','{$rg_co}','{$emissor_rg_co}','{$empresa_co}','{$funcao_co}','{$tempo_serv_co}','{$celular_co}','{$rendimento_co}');
-";
-
-$query_imovel = "
-INSERT INTO `imovel`(`especie_imovel`, `end_imovel`, `data_aquis`, `valor_venal`, `valor_divida`) 
-
-VALUES 
-
-('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');
-";
-
-$query_carro = "
-INSERT INTO `carro`(`marca`, `modelo`, `ano`) 
-
-VALUES
-
- ('{$marca}','{$modelo}','{$ano}');
-";
-
-$query_pessoal = "
-INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
-
-VALUES
-
-('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');
-
-INSERT INTO `ref_pessoal`(`nome_rp`, `endereco_rp`, `telefone_rp`)
-
-VALUES
-
-('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');
-";
-
-$query_bancaria = "
-INSERT INTO `ref_bancaria`(`banco_rb`, `agencia_rb`, `conta_rb`, `cheque_esp_rb`, `limite_rb`)
-
-VALUES
-
-('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');
-
-";
+$query_bancaria = banco_q . "('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');";
 
 $sql = $query_cliente . $query_endereco . query_pessoal . query_bancaria;
 
