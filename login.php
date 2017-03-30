@@ -5,11 +5,11 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $cpf  = mysqli_real_escape_string($db,$_POST['user']);
-      $nasc = mysqli_real_escape_string($db,$_POST['pass']); 
+      $cpf  = mysqli_real_escape_string($conn,$_POST['user']);
+      $nasc = mysqli_real_escape_string($conn,$_POST['pass']); 
       
       $sql = login_q($cpf, $nasc);
-      $result = mysqli_query($db,$sql);
+      $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
       
