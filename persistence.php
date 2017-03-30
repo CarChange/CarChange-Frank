@@ -1,7 +1,7 @@
 <?php
 // Server Data
-include("config.php");
-include("query.php");
+include 'config.php';
+include 'query.php';
 //Form Data
 
 //Tabela Cliente
@@ -94,33 +94,36 @@ $marca      = $_POST["marca"];
 $modelo     = $_POST["modelo"];
 $ano        = $_POST["ano"];
 
+//Erro sql
+$de  = "Duplicate entry";
+$fkcpf = "for key 'cpf_cliente'";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query_cliente = cliente_q . "'{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');";
+$query_cliente = $cliente_q . "('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');";
 
 $query_endereco = $endereco_q . "({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});";
 
-$query_comercial = comercial_q . "('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');";
+$query_comercial = $comercial_q . "('{$cep_c}','{$empresa_c}','{$rua_c}','{$bairro_c}','{$cidade_c}','{$uf_c}','{$funcao_c}','{$tempo_c}','{$telefone_c}','{$email_c}','{$celular_c}');";
 
-$query_conjuge = conjuge_q . "('{$cpf_co}','{$nome_co}','{$data_nasc_co}','{$natur_co}','{$uf_co}','{$nacion_co}','{$rg_co}','{$emissor_rg_co}','{$empresa_co}','{$funcao_co}','{$tempo_serv_co}','{$celular_co}','{$rendimento_co}');";
+$query_conjuge = $conjuge_q . "('{$cpf_co}','{$nome_co}','{$data_nasc_co}','{$natur_co}','{$uf_co}','{$nacion_co}','{$rg_co}','{$emissor_rg_co}','{$empresa_co}','{$funcao_co}','{$tempo_serv_co}','{$celular_co}','{$rendimento_co}');";
 
-$query_imovel = imovel_q . "('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');";
+$query_imovel = $imovel_q . "('{$especie_imovel}','{$end_imovel}','{$data_aquis}','{$valor_venal}','{$valor_divida}');";
 
-$query_carro = carro_q . "('{$marca}','{$modelo}','{$ano}');";
+$query_carro = $carro_q . "('{$marca}','{$modelo}','{$ano}');";
 
-$query_pessoal = pessoal_q . "('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');" . pessoal_q . "('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');";
+$query_pessoal = $pessoal_q . "('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');" . $pessoal_q . "('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');";
 
-$query_bancaria = banco_q . "('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');";
+$query_bancaria = $banco_q . "('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');";
 
-$sql = $query_cliente . $query_endereco . query_pessoal . query_bancaria;
+$sql = $query_cliente . $query_endereco . $query_pessoal . $query_bancaria;
 
-if(strcmp($conjuge, "casado") == 0)         $sql .= $query_conjuge;
+if(strcmp($est_civil, "casado") == 0)       $sql .= $query_conjuge;
 if(strcmp($profissao, "desempregado") != 0) $sql .= $query_comercial;
 if(strcmp($tem_imovel, "sim") == 0)         $sql .= $query_imovel;
 if(strcmp($tem_carro, "sim") == 0)          $sql .= $query_carro;
@@ -132,8 +135,15 @@ if ($conn->multi_query($sql) === TRUE) {
         alert('Seja bem-vindo a CarChange! Seu cadastro foi realizado com sucesso. Em breve entraremos em contato.');
         window.location.href='index.html';
     </script>";
+} else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fkcpf) !== false)){
+    //Msg de cpf repetido
+    echo "<script>
+        alert('Atenção: CPF já cadastrado.');
+        window.location.href='cadastro.html';
+    </script>";
+    die();
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . "<br>" . $conn->error;
 }
 
 $conn->close();

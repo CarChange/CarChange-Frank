@@ -1,7 +1,7 @@
 <?php
 // Server Data
-include("config.php");
-include("query.php");
+include "config.php";
+include "query.php";
 //Form Data
 $nome          = mb_strtoupper($_POST["nome"]);
 $sobrenome     = mb_strtoupper($_POST["sobrenome"]);
@@ -42,7 +42,7 @@ $sql = $prospection_q . "('{$id_cliente}','{$nome}','{$tel_completo}','{$email}'
 if ($conn->query($sql) === TRUE) {
     //Msg
     echo "<script>
-        alert('Obrigado pelo interesse! Logo um representante entrará em contato. <br> teste');
+        alert('Obrigado pelo interesse! Logo um representante entrará em contato.s');
         window.location.href='index.html';
     </script>";
     exit();
