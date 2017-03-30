@@ -1,5 +1,6 @@
 <?php
    include 'config.php';
+   include 'query.php';
    session_start();
    
    $user_check = $_SESSION['login_user'];
@@ -8,9 +9,13 @@
    
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
    
-   $login_session = $row['username'];
+   $login_session = $row['id_cliente'];
    
    if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
+       echo "<script>
+                alert('Por gentileza, realize o login na pagina inicial.');
+                window.location.href='index.html';
+            </script>";
+      header("location: index.html");
    }
 ?>
