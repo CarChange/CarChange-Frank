@@ -1,7 +1,7 @@
 <?php
 // Server Data
-include("config.php");
-include("query.php");
+include 'config.php';
+include 'query.php';
 //Form Data
 
 //Tabela Cliente
@@ -96,7 +96,7 @@ $ano        = $_POST["ano"];
 
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);

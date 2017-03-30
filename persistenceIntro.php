@@ -1,7 +1,7 @@
 <?php
 // Server Data
-include("config.php");
-include("query.php");
+include "config.php";
+include "query.php";
 //Form Data
 $nome          = mb_strtoupper($_POST["nome"]);
 $sobrenome     = mb_strtoupper($_POST["sobrenome"]);
