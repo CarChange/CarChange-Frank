@@ -120,7 +120,7 @@ $query_bancaria = $banco_q . "('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$ch
 
 $sql = $query_cliente . $query_endereco . $query_pessoal . $query_bancaria;
 
-if(strcmp($conjuge, "casado") == 0)         $sql .= $query_conjuge;
+if(strcmp($est_civil, "casado") == 0)       $sql .= $query_conjuge;
 if(strcmp($profissao, "desempregado") != 0) $sql .= $query_comercial;
 if(strcmp($tem_imovel, "sim") == 0)         $sql .= $query_imovel;
 if(strcmp($tem_carro, "sim") == 0)          $sql .= $query_carro;
