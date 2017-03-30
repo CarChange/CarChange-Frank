@@ -114,11 +114,11 @@ $query_imovel = $imovel_q . "('{$especie_imovel}','{$end_imovel}','{$data_aquis}
 
 $query_carro = $carro_q . "('{$marca}','{$modelo}','{$ano}');";
 
-$query_pessoal = $pessoal_q . "('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');" . pessoal_q . "('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');";
+$query_pessoal = $pessoal_q . "('{$nome_rp}','{$endereco_rp}','{$telefone_rp}');" . $pessoal_q . "('{$nome_rp2}','{$endereco_rp2}','{$telefone_rp2}');";
 
 $query_bancaria = $banco_q . "('{$banco_rb}','{$agencia_rb}','{$conta_rb}','{$cheque_esp_rb}','{$limite_rb}');";
 
-$sql = $query_cliente . $query_endereco . query_pessoal . query_bancaria;
+$sql = $query_cliente . $query_endereco . $query_pessoal . $query_bancaria;
 
 if(strcmp($conjuge, "casado") == 0)         $sql .= $query_conjuge;
 if(strcmp($profissao, "desempregado") != 0) $sql .= $query_comercial;
