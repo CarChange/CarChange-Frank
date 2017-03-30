@@ -94,6 +94,9 @@ $marca      = $_POST["marca"];
 $modelo     = $_POST["modelo"];
 $ano        = $_POST["ano"];
 
+//Erro sql
+$de  = "Duplicate entry";
+$fkcpf = "for key 'cpf_cliente'";
 
 // Create connection
 //$conn = new mysqli($servername, $username, $password, $dbname);
@@ -132,8 +135,15 @@ if ($conn->multi_query($sql) === TRUE) {
         alert('Seja bem-vindo a CarChange! Seu cadastro foi realizado com sucesso. Em breve entraremos em contato.');
         window.location.href='index.html';
     </script>";
+} else if ((strpos($conn->error, $de) !== false) && (strpos($conn->error, $fkcpf) !== false)){
+    //Msg de cpf repetido
+    echo "<script>
+        alert('Atenção: CPF já cadastrado.');
+        window.location.href='cadastro.html';
+    </script>";
+    die();
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . "<br>" . $conn->error;
 }
 
 $conn->close();

@@ -17,7 +17,7 @@
                     alert('Não foi possível conectar com a base de dados. Tente novamente mais tarde.');
                     window.location.href='index.html';
                 </script>";
-           exit();
+           die();
        }
        
        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
