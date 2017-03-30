@@ -102,7 +102,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query_cliente = $cliente_q . "'{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');";
+$query_cliente = $cliente_q . "('{$cpf}','{$nome}','{$email}','{$celular}','{$data_nasc}','{$nacion}','{$natur}','{$uf}','{$est_civil}','{$sexo}','{$num_dep}','{$rg}','{$emissor_rg}','{$profissao}','{$nome_pai}','{$nome_mae}','{$rendimento}','{$rend_outros}');";
 
 $query_endereco = $endereco_q . "({$cep},'{$rua}','{$bairro}','{$cidade}','{$uf_res}','{$tempo_res}',{$telefone},{$casa_propria},{$mora_sozinho});";
 
